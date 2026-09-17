@@ -23,10 +23,12 @@
 ## Project Structure
 - `index.html`: Production-ready, 100% English responsive landing page & application with live cost estimator, portfolio showcase, WhatsApp quote dispatch, and FAQ accordion.
 - `logo.png`: Official Goinfi IT electric-blue transparent brand logo (1024x266).
-- `goinfi-it.zip`: Pre-packaged archive for 1-click cPanel deployment to `public_html/it.goinfi.biz`.
+- `deploy.js`: Automated 1-click FTP deployment script (`npm run deploy`) syncing changes to `it.goinfi.biz` directly.
 - `server.js`: Lightweight local test server running on port `4000`.
+- `sitemap.xml` & `robots.txt`: Production search engine indexing assets.
+- `.htaccess`: High-performance LiteSpeed caching, HTTPS redirection, and security headers.
+- `goinfi-it.zip`: Pre-packaged backup archive.
 
-## Deployment SOP (cPanel):
-1. Subdomain: `it.goinfi.biz`
-2. Document Root: `public_html/it.goinfi.biz`
-3. Upload `goinfi-it.zip` and extract to serve `index.html` and `logo.png`.
+## Automated Deployment SOP:
+- Run `npm run deploy` (or `node deploy.js`).
+- Uploads updated `index.html`, `logo.png`, `sitemap.xml`, `robots.txt`, and `.htaccess` via authenticated FTP in seconds. Zero manual cPanel or zip operations required.

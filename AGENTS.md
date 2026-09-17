@@ -7,4 +7,4 @@ Please refer to `PROJECT_CONTEXT.md` for all architectural, branding, and deploy
 - **Domain:** Dedicated subdomain is `it.goinfi.biz`.
 - **Language:** All website copy, UI, buttons, and quotes must remain 100% English.
 - **Support & WhatsApp:** Direct WhatsApp lead generation points to `+977 9851355569`.
-- **Packaging:** Keep `goinfi-it.zip` updated whenever `index.html` or `logo.png` are modified.
+- **Packaging & Deployment:** Keep `goinfi-it.zip` updated for backups, and use `npm run deploy` (or `node deploy.js`) to auto-deploy changes directly to `https://it.goinfi.biz/` via FTP without manual cPanel uploads.
