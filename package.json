@@ -1,0 +1,26 @@
+{
+  "name": "goinfi-it",
+  "version": "1.0.0",
+  "description": "Welcome to the official agency web platform for **Goinfi** (`goinfi.biz`).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giftrisal/goinfi-it.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Giftrisal/goinfi-it/issues"
+  },
+  "homepage": "https://github.com/Giftrisal/goinfi-it#readme",
+  "dependencies": {
+    "basic-ftp": "^6.2.1"
+  }
+}
