@@ -3,58 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Goinfi IT — Web Design, Mobile Apps & Ultra-Fast Cloud Hosting</title>
-  <meta name="description" content="Goinfi IT builds high-performance websites, Android/iOS mobile apps, and lightning-fast cloud hosting solutions for businesses in Nepal and worldwide." />
+  <title>Goinfi Labs — Engineering Next-Gen Web, Software & Mobile Apps</title>
+  <meta name="description" content="Goinfi Labs is an elite digital engineering unit specializing in custom web applications, enterprise software development, and cross-platform iOS/Android mobile apps." />
   <link rel="canonical" href="https://it.goinfi.biz/" />
   <link rel="icon" type="image/png" href="logo.png" />
 
-  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://it.goinfi.biz/" />
-  <meta property="og:title" content="Goinfi IT — Web Design, Mobile Apps & Ultra-Fast Cloud Hosting" />
-  <meta property="og:description" content="Empowering businesses with modern websites, eSewa & Khalti e-commerce, Android/iOS apps, and NVMe cloud hosting. Launch in 3 to 7 days." />
+  <meta property="og:title" content="Goinfi Labs — Next-Gen Web, Software & Mobile App Development" />
+  <meta property="og:description" content="Turn ideas into scalable digital products. Web development, custom enterprise software, and mobile apps built by Goinfi Labs." />
   <meta property="og:image" content="https://it.goinfi.biz/logo.png" />
-  <meta property="og:site_name" content="Goinfi IT" />
+  <meta property="og:site_name" content="Goinfi Labs" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://it.goinfi.biz/" />
-  <meta name="twitter:title" content="Goinfi IT — Web Design, Mobile Apps & Ultra-Fast Cloud Hosting" />
-  <meta name="twitter:description" content="Empowering businesses with modern websites, eSewa & Khalti e-commerce, Android/iOS apps, and NVMe cloud hosting." />
+  <meta name="twitter:title" content="Goinfi Labs — Next-Gen Web, Software & Mobile App Development" />
+  <meta name="twitter:description" content="Custom web applications, enterprise software systems, and mobile apps with end-to-end engineering excellence." />
   <meta name="twitter:image" content="https://it.goinfi.biz/logo.png" />
 
-  <!-- JSON-LD Structured Data Schema -->
+  <!-- Structured Data JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Goinfi IT",
+    "name": "Goinfi Labs",
     "url": "https://it.goinfi.biz/",
     "logo": "https://it.goinfi.biz/logo.png",
     "image": "https://it.goinfi.biz/logo.png",
-    "description": "Professional website design, mobile application engineering, and managed NVMe cloud hosting.",
+    "description": "Elite engineering laboratory building high-performance web applications, custom enterprise software, and cross-platform mobile applications.",
     "telephone": "+9779851355569",
     "email": "support@goinfi.biz",
-    "priceRange": "NPR 4,999 - NPR 69,999+",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kathmandu & Pokhara",
       "addressCountry": "NP"
     },
-    "areaServed": [
-      { "@type": "Country", "name": "Nepal" },
-      { "@type": "Place", "name": "Worldwide" }
-    ],
-    "sameAs": [
-      "https://goinfi.biz"
-    ]
+    "areaServed": ["Nepal", "Worldwide"],
+    "sameAs": ["https://goinfi.biz"]
   }
   </script>
 
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -74,21 +68,23 @@
               600: '#0060df',
               700: '#1d4ed8',
             },
-            accent: {
-              blue: '#2563eb',
-              cyan: '#06b6d4',
-              purple: '#7c3aed',
+            cyan: {
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
             },
             dark: {
-              900: '#090d16',
+              950: '#030712',
+              900: '#060b16',
+              850: '#0b1120',
               800: '#0f172a',
               700: '#1e293b',
-              600: '#334155',
             }
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             heading: ['"Outfit"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           }
         }
       }
@@ -96,1000 +92,770 @@
   </script>
 
   <style>
+    /* Invoidea-Style Cyber Background and Aesthetics */
+    :root {
+      --bg-dark: #050811;
+      --glow-blue: rgba(0, 112, 243, 0.35);
+      --glow-cyan: rgba(6, 182, 212, 0.25);
+      --glow-purple: rgba(124, 58, 237, 0.2);
+    }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #090d16;
+      background-color: var(--bg-dark);
       color: #f1f5f9;
       overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
     h1, h2, h3, h4, .font-heading {
       font-family: 'Outfit', sans-serif;
     }
-    .glow-gradient {
-      background: radial-gradient(circle at 50% 20%, rgba(0, 112, 243, 0.22) 0%, rgba(0, 198, 255, 0.12) 35%, transparent 70%);
+
+    /* Subtle Cyber Tech Grid */
+    .cyber-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 50px 50px;
     }
-    .glass-card {
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(12px);
+
+    /* Floating Glowing Radial Mesh Orbs */
+    .orb-glow-1 {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 112, 243, 0.28) 0%, rgba(0, 112, 243, 0) 70%);
+      filter: blur(120px);
+      animation: floatOrb1 18s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .orb-glow-2 {
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 70%);
+      filter: blur(110px);
+      animation: floatOrb2 22s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .orb-glow-3 {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 70%);
+      filter: blur(130px);
+      animation: floatOrb3 20s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(80px, 40px) scale(1.1); }
+      100% { transform: translate(-40px, 80px) scale(0.95); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-90px, -50px) scale(1.15); }
+      100% { transform: translate(50px, -30px) scale(1); }
+    }
+    @keyframes floatOrb3 {
+      0% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(60px, -60px) scale(1.08); }
+      100% { transform: translate(-50px, 30px) scale(0.92); }
+    }
+
+    /* Glassmorphic Cyber Cards */
+    .lab-card {
+      background: rgba(11, 17, 32, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .glass-card:hover {
-      border-color: rgba(0, 112, 243, 0.45);
-      transform: translateY(-3px);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    .lab-card:hover {
+      border-color: rgba(0, 112, 243, 0.5);
+      background: rgba(14, 23, 42, 0.85);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0, 112, 243, 0.25);
     }
+
+    /* Glow button */
     .glow-btn {
-      box-shadow: 0 0 25px -5px rgba(0, 112, 243, 0.55);
+      box-shadow: 0 0 25px -4px rgba(0, 112, 243, 0.55);
+      transition: all 0.3s ease;
     }
     .glow-btn:hover {
-      box-shadow: 0 0 35px 2px rgba(0, 198, 255, 0.7);
+      box-shadow: 0 0 35px 2px rgba(6, 182, 212, 0.7);
+      transform: translateY(-1px);
     }
+
+    /* Tech badge pulse */
     .badge-pulse {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      animation: badgePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
-    @keyframes pulse {
+    @keyframes badgePulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(1.05); }
+      50% { opacity: 0.6; transform: scale(1.06); }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050811;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0070f3;
     }
   </style>
 </head>
-<body class="selection:bg-blue-600 selection:text-white">
+<body class="selection:bg-blue-600 selection:text-white relative">
 
-  <!-- TOP ANNOUNCEMENT BANNER -->
-  <div class="bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-600 text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-    <span class="bg-white/20 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Special Offer</span>
-    <span>Launch your business online: Get <strong>Free Domain + 1 Year NVMe Cloud Hosting + eSewa/Khalti Payment</strong> with any Web Package!</span>
-    <a href="#quote-calculator" class="underline hover:text-cyan-200 font-bold ml-1">Calculate Cost &rarr;</a>
+  <!-- BACKGROUND GLOW ORBS & CYBER GRID (INVOIDEA SIGNATURE EFFECT) -->
+  <div class="fixed inset-0 cyber-grid pointer-events-none z-0 opacity-80"></div>
+  <div class="fixed top-[-100px] left-[-100px] orb-glow-1"></div>
+  <div class="fixed top-[30%] right-[-150px] orb-glow-2"></div>
+  <div class="fixed bottom-[-100px] left-[20%] orb-glow-3"></div>
+
+  <!-- TOP LAB NOTIFICATION BANNER -->
+  <div class="relative z-50 bg-gradient-to-r from-blue-900/90 via-indigo-950/90 to-cyan-950/90 border-b border-blue-500/20 text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 backdrop-blur-md">
+    <span class="bg-blue-500/30 text-cyan-300 border border-blue-400/40 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Goinfi Labs Sprint</span>
+    <span>Currently taking on <strong>Q3/Q4 Web, Enterprise Software & Mobile App</strong> projects.</span>
+    <a href="#estimator" class="underline hover:text-cyan-300 font-bold ml-1 flex items-center gap-1 inline-flex">
+      <span>Get Estimated Cost & Spec</span>
+      <span>&rarr;</span>
+    </a>
   </div>
 
   <!-- NAVIGATION HEADER -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-dark-900/80 border-b border-white/10">
+  <header class="sticky top-0 z-40 backdrop-blur-2xl bg-dark-950/80 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO & PARENT ECOSYSTEM BADGE -->
+      <!-- LOGO & BRANDING -->
       <a href="#" class="flex items-center gap-3 group py-2">
-        <img src="logo.png" alt="Goinfi IT Logo" class="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-105" />
-        <span class="hidden lg:inline-flex items-center gap-1.5 text-[10px] text-cyan-300 font-bold uppercase tracking-wider bg-blue-500/10 border border-blue-500/25 px-2.5 py-1 rounded-full">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-          <span>A Goinfi Enterprise</span>
-        </span>
+        <img src="logo.png" alt="Goinfi Logo" class="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+        <div class="flex items-center gap-2">
+          <span class="text-xl sm:text-2xl font-extrabold font-heading tracking-tight text-white flex items-center">
+            GOINFI<span class="text-cyan-400 ml-1">LABS</span>
+          </span>
+          <span class="hidden sm:inline-flex items-center gap-1.5 text-[10px] text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/10 border border-cyan-500/30 px-2 py-0.5 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>A Goinfi Enterprise</span>
+          </span>
+        </div>
       </a>
 
       <!-- NAV LINKS -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
-        <a href="#process" class="hover:text-cyan-400 transition-colors">How It Works</a>
-        <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfolio</a>
-        <a href="#quote-calculator" class="hover:text-cyan-400 transition-colors flex items-center gap-1">
-          <span>Cost Estimator</span>
-          <span class="text-[10px] bg-blue-500/20 text-cyan-300 px-1.5 py-0.5 rounded-md font-bold">Live</span>
+        <a href="#pillars" class="hover:text-cyan-400 transition-colors">Core Capabilities</a>
+        <a href="#tech-stack" class="hover:text-cyan-400 transition-colors">Tech Stack</a>
+        <a href="#process" class="hover:text-cyan-400 transition-colors">Lab Sprint</a>
+        <a href="#estimator" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          <span>Project Estimator</span>
+          <span class="text-[10px] bg-blue-500/30 text-cyan-300 px-1.5 py-0.5 rounded-md font-mono font-bold">Interactive</span>
         </a>
-        <a href="#pricing" class="hover:text-cyan-400 transition-colors">Packages</a>
-        <a href="#hosting" class="hover:text-cyan-400 transition-colors">Cloud Hosting</a>
-        <a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a>
+        <a href="#guarantees" class="hover:text-cyan-400 transition-colors">Guarantees</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
       </nav>
 
       <!-- ACTION BUTTONS -->
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20team!%20I%20want%20to%20discuss%20a%20website%20or%20mobile%20app%20project." target="_blank" class="hidden sm:flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] hover:bg-[#25D366]/15 text-gray-200 hover:text-white transition-all">
+        <!-- Direct WhatsApp Chat -->
+        <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20Labs!%20I%20want%20to%20discuss%20a%20new%20Web%2C%20Software%2C%20or%20Mobile%20App%20project." target="_blank" class="hidden sm:flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] hover:bg-[#25D366]/15 text-gray-200 hover:text-white transition-all">
           <span class="w-2 h-2 rounded-full bg-[#25D366] badge-pulse"></span>
           <span>WhatsApp Chat</span>
         </a>
 
-        <a href="#quote-calculator" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs shadow-md shadow-blue-500/25 transition-all">
-          Get Instant Quote
+        <!-- Start Project CTA -->
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wide shadow-md shadow-blue-500/25 transition-all">
+          Start Project
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative pt-16 pb-24 overflow-hidden glow-gradient">
+  <!-- HERO SECTION WITH INVOIDEA-STYLE CYBER CANVAS & DYNAMIC MOTION -->
+  <section class="relative pt-16 sm:pt-24 pb-28 sm:pb-36 overflow-hidden z-10">
+    
+    <!-- Interactive Background Particle Canvas -->
+    <canvas id="cyberCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"></canvas>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       
-      <!-- Top Badge -->
+      <!-- Top Ecosystem Pill -->
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
         <span class="flex h-2 w-2 relative">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
         </span>
-        <span class="text-xs font-semibold text-gray-300">Official Technology & Cloud Division of <a href="https://goinfi.biz" target="_blank" class="text-cyan-400 font-bold hover:underline">Goinfi (goinfi.biz)</a></span>
+        <span class="text-xs font-semibold text-gray-300">Engineering & Product Development Lab of <a href="https://goinfi.biz" target="_blank" class="text-cyan-400 font-bold hover:underline">Goinfi (goinfi.biz)</a></span>
       </div>
 
-      <!-- Main Headline -->
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-white tracking-tight max-w-5xl mx-auto leading-[1.15]">
-        High-Performance <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-sky-300 bg-clip-text text-transparent">Websites, Apps</span> & Ultra-Fast Cloud Hosting
+      <!-- Main Bold Heading -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-white tracking-tight max-w-5xl mx-auto leading-[1.12]">
+        We Engineer Scalable <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-sky-200 bg-clip-text text-transparent">
+          Web Apps, Software & Mobile Apps
+        </span>
       </h1>
 
       <!-- Subtitle -->
       <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed">
-        We empower businesses, e-commerce brands, and growing startups with modern web platforms, Android & iOS mobile applications, and enterprise cloud hosting. Built-in <strong>eSewa, Khalti & Global Card Payments</strong>, delivered in as fast as 3 to 7 days.
+        Goinfi Labs transforms complex business problems into production-grade digital products. From high-converting web portals to custom enterprise architectures and native mobile applications.
       </p>
 
-      <!-- CTA Buttons -->
+      <!-- Primary Action Buttons -->
       <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <a href="#quote-calculator" class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm tracking-wide glow-btn transition-all flex items-center gap-2">
-          <span>⚡ Calculate Your Project Cost</span>
+        <a href="#estimator" class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm tracking-wide glow-btn transition-all flex items-center gap-2">
+          <span>⚡ Estimate Project Budget & Timeline</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </a>
 
-        <a href="#portfolio" class="px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm tracking-wide transition-all flex items-center gap-2">
-          <span>Explore Recent Work</span>
-          <span class="text-xs bg-white/10 px-2 py-0.5 rounded text-gray-300">12+ Demos</span>
+        <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20Labs%20team!%20I%20have%20a%20project%20requirement%20I%20would%20like%20to%20discuss." target="_blank" class="px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-[#25D366]/40 hover:border-[#25D366] text-white font-bold text-sm tracking-wide transition-all flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] badge-pulse"></span>
+          <span>Consult Lead Engineer via WhatsApp</span>
         </a>
       </div>
 
-      <!-- Trust Badges -->
-      <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto text-left">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-cyan-400 text-lg">⚡</div>
-          <div>
-            <div class="text-sm font-bold text-white">3-7 Day Delivery</div>
-            <div class="text-xs text-gray-400">Swift & stress-free launch</div>
-          </div>
+      <!-- Quick Metrics Strip -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/10">
+        <div class="p-3 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold font-heading text-cyan-400">100%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">IP & Source Code Ownership</div>
         </div>
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-lg">💳</div>
-          <div>
-            <div class="text-sm font-bold text-white">eSewa & Khalti Ready</div>
-            <div class="text-xs text-gray-400">Local & international checkout</div>
-          </div>
+        <div class="p-3 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold font-heading text-blue-400">Zero Risk</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Milestone-Based Payments</div>
         </div>
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-lg">🛡️</div>
-          <div>
-            <div class="text-sm font-bold text-white">99.9% Uptime Cloud</div>
-            <div class="text-xs text-gray-400">NVMe SSD & Free SSL</div>
-          </div>
+        <div class="p-3 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold font-heading text-cyan-400">&lt; 300ms</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Ultra-Fast Performance</div>
         </div>
-
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-cyan-400 text-lg">🤝</div>
-          <div>
-            <div class="text-sm font-bold text-white">Full Ownership</div>
-            <div class="text-xs text-gray-400">100% code & domain rights</div>
-          </div>
+        <div class="p-3 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold font-heading text-blue-400">24/7 SLA</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider mt-1">Dedicated Engineering Support</div>
         </div>
       </div>
 
-      <!-- PAYMENT & CHECKOUT PARTNERS STRIP (Trust & Transparency) -->
-      <div class="mt-14 pt-8 border-t border-white/5 max-w-5xl mx-auto text-center">
-        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block mb-4">
-          Integrated Digital Payment & Checkout Systems
-        </span>
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-          <!-- eSewa -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#60bb46]"></span>
-            <span class="text-xs font-bold text-white tracking-wide">eSewa</span>
-            <span class="text-[10px] text-emerald-400 font-semibold bg-emerald-500/10 px-1.5 py-0.5 rounded">SDK Ready</span>
-          </div>
-          <!-- Khalti -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#5c2d91]"></span>
-            <span class="text-xs font-bold text-white tracking-wide">Khalti</span>
-            <span class="text-[10px] text-purple-400 font-semibold bg-purple-500/10 px-1.5 py-0.5 rounded">Merchant API</span>
-          </div>
-          <!-- Fonepay -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#e31b23]"></span>
-            <span class="text-xs font-bold text-white tracking-wide">Fonepay</span>
-            <span class="text-[10px] text-red-400 font-semibold bg-red-500/10 px-1.5 py-0.5 rounded">Dynamic QR</span>
-          </div>
-          <!-- ConnectIPS -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#005ba9]"></span>
-            <span class="text-xs font-bold text-white tracking-wide">ConnectIPS</span>
-            <span class="text-[10px] text-blue-400 font-semibold bg-blue-500/10 px-1.5 py-0.5 rounded">Direct Bank</span>
-          </div>
-          <!-- Cards -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#f79e1b]"></span>
-            <span class="text-xs font-bold text-white tracking-wide">Visa / Mastercard</span>
-            <span class="text-[10px] text-amber-400 font-semibold bg-amber-500/10 px-1.5 py-0.5 rounded">Global</span>
-          </div>
-          <!-- Direct Bank -->
-          <div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-500/40 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-            <span class="text-xs font-bold text-white tracking-wide">Bank Transfer</span>
-            <span class="text-[10px] text-cyan-400 font-semibold bg-cyan-500/10 px-1.5 py-0.5 rounded">Invoice</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- CORE SERVICES SECTION -->
-  <section id="services" class="py-24 bg-dark-800/40 relative border-t border-b border-white/5">
+  <!-- CORE 3 PILLARS: WEB, SOFTWARE, AND APP DEVELOPMENT -->
+  <section id="pillars" class="relative py-24 z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Our Core Capabilities</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-4 tracking-tight">Everything Your Business Needs to Grow Online</h2>
-        <p class="text-gray-400 mt-4 text-base">From high-converting landing pages and full e-commerce stores to native mobile apps and managed cloud servers.</p>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+          Core Capabilities
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+          What We Build at Goinfi Labs
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-400">
+          We don’t deliver generic templates. Every line of code is engineered for speed, high conversion, uncompromising security, and infinite scalability.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- The 3 Pillars Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <!-- Service 1: Website Design & Dev -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+        <!-- PILLAR 1: WEB PAGE & WEB APPLICATION DEVELOPMENT -->
+        <div class="lab-card rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -right-12 -top-12 w-32 h-32 bg-blue-600/15 rounded-full blur-2xl group-hover:bg-blue-600/30 transition-all"></div>
+          
           <div>
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-2xl text-white mb-6 shadow-lg shadow-blue-500/20">
-              💻
+            <!-- Icon -->
+            <div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-blue-400 transition-colors">Website Design & Development</h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-6">
-              Modern, mobile-responsive, ultra-fast websites engineered to convert visitors into paying clients.
+
+            <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Pillar 01</div>
+            <h3 class="text-2xl font-bold font-heading text-white mt-1 mb-3">
+              Web Development & Modern Portals
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Lightning-fast corporate websites, high-converting product landing pages, and complex dynamic SaaS web platforms built with Next.js, React, and Tailwind CSS.
             </p>
-            <ul class="space-y-2.5 text-xs text-gray-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Corporate & Business Brand Profiles</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> E-commerce Stores with eSewa / Khalti / Cards</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Travel, Hotel & Restaurant Booking Portals</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> 90+ Google PageSpeed & SEO Optimized</li>
+
+            <!-- Features Checklist -->
+            <ul class="space-y-2.5 text-xs text-gray-300 mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Full-Stack Next.js 14 / React architecture</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>eSewa, Khalti, Fonepay & Global Stripe/PayPal checkout</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>SEO-optimized with Google 95+ Core Web Vitals</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated CMS & custom client admin portal</span>
+              </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-            <span class="text-xs font-semibold text-gray-400">Starting from</span>
-            <span class="text-base font-extrabold text-cyan-400">Rs. 14,999</span>
-          </div>
+
+          <a href="#estimator" class="w-full py-3 rounded-xl bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 text-cyan-300 font-bold text-xs tracking-wider uppercase text-center transition-all">
+            Configure Web Project &rarr;
+          </a>
         </div>
 
-        <!-- Service 2: Mobile App Development -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group relative overflow-hidden border-blue-500/40">
-          <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-cyan-500 text-dark-900 text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl tracking-wider">
-            High Growth
-          </div>
+        <!-- PILLAR 2: CUSTOM SOFTWARE & ENTERPRISE SYSTEMS -->
+        <div class="lab-card rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group border-cyan-500/30">
+          <div class="absolute -right-12 -top-12 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl group-hover:bg-cyan-500/40 transition-all"></div>
+          
           <div>
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-blue-600 via-blue-500 to-cyan-500 flex items-center justify-center text-2xl text-white mb-6 shadow-lg shadow-blue-500/25">
-              📱
+            <!-- Icon -->
+            <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-cyan-400 transition-colors">Mobile App Development</h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-6">
-              Native Android and iOS mobile applications powered by Flutter and React Native. Smooth, beautiful, and intuitive.
+
+            <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Pillar 02</div>
+            <h3 class="text-2xl font-bold font-heading text-white mt-1 mb-3">
+              Custom Software & Systems
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Tailor-made software architectures for businesses. Custom ERP/CRM platforms, automated billing engines, workflow automations, and scalable cloud microservices.
             </p>
-            <ul class="space-y-2.5 text-xs text-gray-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Dual Launch: Android (Google Play) & iOS</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Push Notifications & SMS OTP Alerts</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Real-time Chat & Order Location Tracking</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Secure Customer Wallet & Profile Accounts</li>
+
+            <!-- Features Checklist -->
+            <ul class="space-y-2.5 text-xs text-gray-300 mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Node.js, Python, PostgreSQL & Redis backends</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated inventory, accounting & payroll systems</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>High-throughput REST & GraphQL API design</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Role-based access control & SOC2-ready encryption</span>
+              </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-            <span class="text-xs font-semibold text-gray-400">Starting from</span>
-            <span class="text-base font-extrabold text-cyan-400">Rs. 69,999</span>
-          </div>
+
+          <a href="#estimator" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wider uppercase text-center transition-all shadow-md shadow-cyan-500/20">
+            Configure Software Project &rarr;
+          </a>
         </div>
 
-        <!-- Service 3: Ultra-Fast Cloud Hosting & Domains -->
-        <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+        <!-- PILLAR 3: MOBILE APPLICATION DEVELOPMENT -->
+        <div class="lab-card rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -right-12 -top-12 w-32 h-32 bg-indigo-600/15 rounded-full blur-2xl group-hover:bg-indigo-600/30 transition-all"></div>
+          
           <div>
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-purple-600 to-pink-600 flex items-center justify-center text-2xl text-white mb-6 shadow-lg shadow-purple-500/20">
-              ☁️
+            <!-- Icon -->
+            <div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
             </div>
-            <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-purple-400 transition-colors">Managed Cloud Hosting</h3>
-            <p class="text-sm text-gray-400 leading-relaxed mb-6">
-              Enterprise NVMe cloud servers configured for top speed, bulletproof security, automated daily backups, and 99.9% uptime.
+
+            <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Pillar 03</div>
+            <h3 class="text-2xl font-bold font-heading text-white mt-1 mb-3">
+              Mobile App Development (iOS & Android)
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed mb-6">
+              Production-ready mobile applications built with Flutter and React Native. Smooth 60fps native feel, offline syncing, real-time push notifications, and App Store publishing.
             </p>
-            <ul class="space-y-2.5 text-xs text-gray-300">
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Ultra-Fast NVMe SSD Storage</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Free Lifetime SSL Certificate</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> Professional Business Email (info@yourdomain.com)</li>
-              <li class="flex items-center gap-2"><span class="text-cyan-400 font-bold">✓</span> 24/7 Server Monitoring & Malware Guard</li>
+
+            <!-- Features Checklist -->
+            <ul class="space-y-2.5 text-xs text-gray-300 mb-8">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Single codebase for iOS & Android (Save 50% time)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>In-app digital wallets, OTP SMS verification & maps</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Firebase & Supabase real-time cloud sync</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Complete Google Play & Apple App Store submission</span>
+              </li>
             </ul>
           </div>
-          <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-            <span class="text-xs font-semibold text-gray-400">Annual Plan</span>
-            <span class="text-base font-extrabold text-cyan-400">Rs. 4,999 / year</span>
-          </div>
+
+          <a href="#estimator" class="w-full py-3 rounded-xl bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 text-cyan-300 font-bold text-xs tracking-wider uppercase text-center transition-all">
+            Configure App Project &rarr;
+          </a>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- HOW WE WORK / 4-STEP TRANSPARENT WORKFLOW -->
-  <section id="process" class="py-24 relative overflow-hidden">
+  <!-- TECH STACK & ENGINEERING STANDARDS (INVOIDEA CYBER AESTHETIC) -->
+  <section id="tech-stack" class="relative py-20 z-10 border-y border-white/10 bg-dark-950/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Transparent Workflow</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-4 tracking-tight">From Concept to Live Launch in 4 Steps</h2>
-        <p class="text-gray-400 mt-4 text-base">Zero technical headaches. Transparent milestones, live prototype previews, and complete control in your hands.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-        
-        <!-- Step 1 -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative group hover:border-blue-500/40 transition-all">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-cyan-400 font-black font-heading text-lg mb-6">
-              01
-            </div>
-            <h3 class="text-lg font-bold font-heading text-white mb-2 group-hover:text-cyan-400 transition-colors">Discovery & Free Quote</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              Share your business needs, required pages, or references. Within 4 hours, receive a transparent fixed quote and architecture roadmap.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/10 text-[11px] font-semibold text-cyan-400 flex items-center gap-1.5">
-            <span>⏱️ Delivery: Instant (4 Hours)</span>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative group hover:border-blue-500/40 transition-all">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-black font-heading text-lg mb-6">
-              02
-            </div>
-            <h3 class="text-lg font-bold font-heading text-white mb-2 group-hover:text-cyan-400 transition-colors">Prototype & 50% Kickoff</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              We design an interactive visual prototype so you see your website before coding. Lock the project with a secure 50% deposit to commence development.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/10 text-[11px] font-semibold text-cyan-400 flex items-center gap-1.5">
-            <span>🛡️ 50% Milestone Deposit</span>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative group hover:border-blue-500/40 transition-all">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-cyan-400 font-black font-heading text-lg mb-6">
-              03
-            </div>
-            <h3 class="text-lg font-bold font-heading text-white mb-2 group-hover:text-cyan-400 transition-colors">Build & Unlimited Edits</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              Engineering with pixel-perfect responsiveness, SEO optimization, and eSewa/Khalti merchant APIs. Test live on a private staging link with free revisions.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/10 text-[11px] font-semibold text-cyan-400 flex items-center gap-1.5">
-            <span>🔄 Revisions until 100% Happy</span>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative group hover:border-blue-500/40 transition-all border-blue-500/30">
-          <div>
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white font-black font-heading text-lg mb-6 shadow-lg shadow-blue-500/20">
-              04
-            </div>
-            <h3 class="text-lg font-bold font-heading text-white mb-2 group-hover:text-cyan-400 transition-colors">Approval, Launch & Rights</h3>
-            <p class="text-xs text-gray-400 leading-relaxed">
-              Pay the remaining 50% balance only after you approve the final product. Receive 100% full source code, domain ownership, and 6 months free care.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-white/10 text-[11px] font-semibold text-cyan-400 flex items-center gap-1.5">
-            <span>🚀 100% Client IP Ownership</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Zero-Risk Milestone Guarantee Banner -->
-      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blue-950/40 via-dark-800 to-cyan-950/40 border border-blue-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex items-center gap-4">
-          <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/40 flex items-center justify-center text-2xl text-cyan-400 flex-shrink-0">
-            🛡️
-          </div>
-          <div>
-            <h4 class="text-base font-bold text-white font-heading">Our Zero-Risk Client Protection Promise</h4>
-            <p class="text-xs text-gray-300 mt-1 max-w-2xl leading-relaxed">
-              You never risk 100% of your budget upfront. Work commences with a 50% commitment, and the remaining 50% is due only when you review and give final approval. 100% code ownership and no vendor lock-in.
-            </p>
-          </div>
-        </div>
-        <a href="#quote-calculator" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wide shadow-lg shadow-blue-500/25 transition-all whitespace-nowrap flex-shrink-0">
-          Calculate Your Project &rarr;
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INTERACTIVE PROJECT COST ESTIMATOR (High-Converting Feature) -->
-  <section id="quote-calculator" class="py-24 relative overflow-hidden">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Interactive Estimator</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-4 tracking-tight">Project Cost & Timeline Estimator</h2>
-        <p class="text-gray-400 mt-2 text-sm">Select your project specifications to calculate an instant transparent quote. Lock your estimate directly via WhatsApp with 1 click!</p>
+        <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-semibold mb-2">Our Engineering Arsenal</div>
+        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Modern Tech Built to Scale Without Rewrites</h3>
       </div>
 
-      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Tech Stack Badges Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
+        
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">⚡</span>
+          <span class="text-xs font-bold text-white font-mono">Next.js 14</span>
+          <span class="text-[10px] text-gray-400">SSR & Edge Web</span>
+        </div>
+
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">📱</span>
+          <span class="text-xs font-bold text-white font-mono">Flutter / React Native</span>
+          <span class="text-[10px] text-gray-400">iOS & Android Apps</span>
+        </div>
+
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">🚀</span>
+          <span class="text-xs font-bold text-white font-mono">Node.js & Python</span>
+          <span class="text-[10px] text-gray-400">High-Concurrency Backend</span>
+        </div>
+
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">🗄️</span>
+          <span class="text-xs font-bold text-white font-mono">PostgreSQL & Redis</span>
+          <span class="text-[10px] text-gray-400">ACID Relational & Cache</span>
+        </div>
+
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">💳</span>
+          <span class="text-xs font-bold text-white font-mono">eSewa & Khalti</span>
+          <span class="text-[10px] text-gray-400">Automated Payments</span>
+        </div>
+
+        <div class="lab-card p-4 rounded-xl flex flex-col items-center justify-center gap-2">
+          <span class="text-2xl">☁️</span>
+          <span class="text-xs font-bold text-white font-mono">AWS & Docker</span>
+          <span class="text-[10px] text-gray-400">Cloud Infrastructure</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PROJECT SCOPE & COST ESTIMATOR (PRIMARY CONVERSION ENGINE) -->
+  <section id="estimator" class="relative py-28 z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+          Interactive Lab Tool
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+          Project Scope & Cost Estimator
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-300">
+          Configure your product requirements below. Get an instant, transparent ballpark estimate and send the complete architectural specification to our lead engineers in 1 click.
+        </p>
+      </div>
+
+      <!-- Estimator Container -->
+      <div class="lab-card rounded-3xl p-6 sm:p-10 border border-cyan-500/30 shadow-2xl relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
           
-          <!-- Controls (Left 2 Columns) -->
-          <div class="lg:col-span-2 space-y-6">
+          <!-- LEFT: CONFIGURATION OPTIONS (8 Cols) -->
+          <div class="lg:col-span-7 space-y-8">
             
             <!-- Step 1: Project Type -->
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-3">1. Select Project Type</label>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="calcProjectType">
-                <button type="button" class="calc-btn active p-4 rounded-xl border border-blue-500 bg-blue-500/10 text-left transition-all" data-value="corporate" data-price="14999" data-days="5">
-                  <div class="text-sm font-bold text-white">Business Website</div>
-                  <div class="text-xs text-gray-400 mt-1">5-8 Pages, Contact Form, SEO</div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-3">
+                01. Select Project Type
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button type="button" onclick="selectType('web')" id="btn-type-web" class="type-btn p-4 rounded-xl border border-blue-500 bg-blue-500/20 text-white font-semibold text-xs text-left transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="text-lg mb-1">🌐</div>
+                    <div class="font-bold">Web Application</div>
+                    <div class="text-[10px] text-gray-300 mt-0.5">Corporate, SaaS, or Portal</div>
+                  </div>
                 </button>
 
-                <button type="button" class="calc-btn p-4 rounded-xl border border-white/10 hover:border-white/30 text-left transition-all" data-value="ecommerce" data-price="34999" data-days="8">
-                  <div class="text-sm font-bold text-white">E-Commerce Store</div>
-                  <div class="text-xs text-gray-400 mt-1">eSewa/Khalti, Products, Admin</div>
+                <button type="button" onclick="selectType('software')" id="btn-type-software" class="type-btn p-4 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="text-lg mb-1">💻</div>
+                    <div class="font-bold">Custom Software</div>
+                    <div class="text-[10px] text-gray-400 mt-0.5">ERP, CRM, Cloud Backend</div>
+                  </div>
                 </button>
 
-                <button type="button" class="calc-btn p-4 rounded-xl border border-white/10 hover:border-white/30 text-left transition-all" data-value="booking" data-price="28999" data-days="7">
-                  <div class="text-sm font-bold text-white">Travel / Hotel Booking</div>
-                  <div class="text-xs text-gray-400 mt-1">Package tours, itinerary, inquiries</div>
-                </button>
-
-                <button type="button" class="calc-btn p-4 rounded-xl border border-white/10 hover:border-white/30 text-left transition-all" data-value="app" data-price="69999" data-days="18">
-                  <div class="text-sm font-bold text-white">Mobile App (Android & iOS)</div>
-                  <div class="text-xs text-gray-400 mt-1">Flutter app, Push alerts, API</div>
+                <button type="button" onclick="selectType('app')" id="btn-type-app" class="type-btn p-4 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all flex flex-col justify-between">
+                  <div>
+                    <div class="text-lg mb-1">📱</div>
+                    <div class="font-bold">Mobile App</div>
+                    <div class="text-[10px] text-gray-400 mt-0.5">iOS & Android (Flutter)</div>
+                  </div>
                 </button>
               </div>
             </div>
 
-            <!-- Step 2: Scale / Pages -->
+            <!-- Step 2: Scale / Tier -->
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-3">2. Scale / Volume</label>
-              <div class="grid grid-cols-3 gap-3" id="calcScale">
-                <button type="button" class="calc-scale-btn active p-3 rounded-xl border border-blue-500 bg-blue-500/10 text-center text-xs font-bold text-white" data-mult="1">Standard (Up to 8 Pages)</button>
-                <button type="button" class="calc-scale-btn p-3 rounded-xl border border-white/10 hover:border-white/30 text-center text-xs font-bold text-gray-300" data-mult="1.3">Medium (8-20 Pages)</button>
-                <button type="button" class="calc-scale-btn p-3 rounded-xl border border-white/10 hover:border-white/30 text-center text-xs font-bold text-gray-300" data-mult="1.7">Enterprise (20+ Pages)</button>
+              <label class="block text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-3">
+                02. Project Scale & Stage
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <button type="button" onclick="selectScale('starter')" id="btn-scale-starter" class="scale-btn p-3.5 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all">
+                  <div class="font-bold text-white">Starter MVP</div>
+                  <div class="text-[10px] text-gray-400">Fast market launch</div>
+                </button>
+                <button type="button" onclick="selectScale('business')" id="btn-scale-business" class="scale-btn p-3.5 rounded-xl border border-blue-500 bg-blue-500/20 text-white font-semibold text-xs text-left transition-all">
+                  <div class="font-bold text-white">Business Grade</div>
+                  <div class="text-[10px] text-cyan-300">Most popular for growth</div>
+                </button>
+                <button type="button" onclick="selectScale('enterprise')" id="btn-scale-enterprise" class="scale-btn p-3.5 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all">
+                  <div class="font-bold text-white">Enterprise Scale</div>
+                  <div class="text-[10px] text-gray-400">High scale & custom SLA</div>
+                </button>
               </div>
             </div>
 
-            <!-- Step 3: Add-ons -->
+            <!-- Step 3: Key Modules & Features -->
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-3">3. Useful Add-ons</label>
-              <div class="space-y-2.5" id="calcAddons">
-                <label class="flex items-center justify-between p-3 rounded-xl border border-white/5 hover:border-white/15 bg-white/5 cursor-pointer">
-                  <div class="flex items-center gap-3">
-                    <input type="checkbox" class="addon-check rounded text-blue-500 focus:ring-0 w-4 h-4 bg-dark-900 border-white/20" data-price="0" checked disabled />
-                    <span class="text-xs text-gray-200 font-medium">1 Year High-Speed NVMe Cloud Hosting + SSL</span>
+              <label class="block text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-3">
+                03. Modules & Integrations Needed
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-cyan-500/40 transition-colors">
+                  <input type="checkbox" id="feat-payment" onchange="calculateEstimate()" checked class="w-4 h-4 rounded text-blue-600 bg-gray-900 border-gray-700 focus:ring-blue-500" />
+                  <div>
+                    <div class="text-xs font-bold text-white">eSewa / Khalti / Stripe Gateway</div>
+                    <div class="text-[10px] text-gray-400">Instant digital checkout & verification</div>
                   </div>
-                  <span class="text-xs font-bold text-cyan-400 uppercase">FREE INCLUDED</span>
                 </label>
 
-                <label class="flex items-center justify-between p-3 rounded-xl border border-white/5 hover:border-white/15 bg-white/5 cursor-pointer">
-                  <div class="flex items-center gap-3">
-                    <input type="checkbox" id="checkPayment" class="addon-check rounded text-blue-500 focus:ring-0 w-4 h-4 bg-dark-900 border-white/20" data-price="4500" />
-                    <span class="text-xs text-gray-200 font-medium">eSewa & Khalti Automated Merchant Integration</span>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-cyan-500/40 transition-colors">
+                  <input type="checkbox" id="feat-admin" onchange="calculateEstimate()" checked class="w-4 h-4 rounded text-blue-600 bg-gray-900 border-gray-700 focus:ring-blue-500" />
+                  <div>
+                    <div class="text-xs font-bold text-white">Custom Admin & Analytics Dashboard</div>
+                    <div class="text-[10px] text-gray-400">Full control over users, orders & stats</div>
                   </div>
-                  <span class="text-xs font-semibold text-gray-400">+ Rs. 4,500</span>
                 </label>
 
-                <label class="flex items-center justify-between p-3 rounded-xl border border-white/5 hover:border-white/15 bg-white/5 cursor-pointer">
-                  <div class="flex items-center gap-3">
-                    <input type="checkbox" id="checkChat" class="addon-check rounded text-blue-500 focus:ring-0 w-4 h-4 bg-dark-900 border-white/20" data-price="2500" />
-                    <span class="text-xs text-gray-200 font-medium">Direct WhatsApp Live Chat Widget & Lead Capture</span>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-cyan-500/40 transition-colors">
+                  <input type="checkbox" id="feat-auth" onchange="calculateEstimate()" checked class="w-4 h-4 rounded text-blue-600 bg-gray-900 border-gray-700 focus:ring-blue-500" />
+                  <div>
+                    <div class="text-xs font-bold text-white">User Auth & Role Management</div>
+                    <div class="text-[10px] text-gray-400">JWT, Google Login & OTP SMS</div>
                   </div>
-                  <span class="text-xs font-semibold text-gray-400">+ Rs. 2,500</span>
                 </label>
 
-                <label class="flex items-center justify-between p-3 rounded-xl border border-white/5 hover:border-white/15 bg-white/5 cursor-pointer">
-                  <div class="flex items-center gap-3">
-                    <input type="checkbox" id="checkSEO" class="addon-check rounded text-blue-500 focus:ring-0 w-4 h-4 bg-dark-900 border-white/20" data-price="3500" />
-                    <span class="text-xs text-gray-200 font-medium">Google Search Console & Local SEO Boost</span>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-cyan-500/40 transition-colors">
+                  <input type="checkbox" id="feat-cloud" onchange="calculateEstimate()" class="w-4 h-4 rounded text-blue-600 bg-gray-900 border-gray-700 focus:ring-blue-500" />
+                  <div>
+                    <div class="text-xs font-bold text-white">Cloud DevOps & CI/CD Setup</div>
+                    <div class="text-[10px] text-gray-400">Docker, Auto-deployment, 99.9% Uptime</div>
                   </div>
-                  <span class="text-xs font-semibold text-gray-400">+ Rs. 3,500</span>
                 </label>
+
               </div>
             </div>
 
           </div>
 
-          <!-- Total Summary (Right Column) -->
-          <div class="bg-dark-900/90 rounded-2xl p-6 border border-white/10 flex flex-col justify-between">
+          <!-- RIGHT: LIVE ESTIMATE CARD & DIRECT WHATSAPP DISPATCH (5 Cols) -->
+          <div class="lg:col-span-5 flex flex-col justify-between bg-dark-900/90 border border-cyan-500/30 rounded-2xl p-6 sm:p-8 relative">
+            
             <div>
-              <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Estimated Quotation</div>
-              <div class="text-3xl sm:text-4xl font-black font-heading text-cyan-400 tracking-tight" id="calcDisplayTotal">
-                Rs. 14,999
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <span class="text-xs font-mono uppercase tracking-wider text-gray-400">Lab Estimate</span>
+                <span class="text-[10px] font-bold text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 px-2 py-0.5 rounded-full">Real-Time Scope</span>
               </div>
-              <div class="text-xs text-gray-400 mt-1">One-time development + 1 Year Free Hosting</div>
 
-              <div class="mt-6 pt-6 border-t border-white/10 space-y-3 text-xs">
-                <div class="flex justify-between text-gray-300">
-                  <span>Estimated Delivery:</span>
-                  <strong class="text-white" id="calcDisplayDays">4 - 6 Days</strong>
+              <!-- Price Display -->
+              <div class="mt-6">
+                <div class="text-xs text-gray-400">Estimated Project Investment</div>
+                <div class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-1" id="price-display">
+                  NPR 34,999
                 </div>
-                <div class="flex justify-between text-gray-300">
-                  <span>Revisions:</span>
-                  <strong class="text-white">Unlimited until Satisfied</strong>
-                </div>
-                <div class="flex justify-between text-gray-300">
-                  <span>Ownership:</span>
-                  <strong class="text-white">100% Client Rights</strong>
-                </div>
-                <div class="flex justify-between text-gray-300">
-                  <span>Support:</span>
-                  <strong class="text-white">6 Months Free Tech Care</strong>
+                <div class="text-xs text-cyan-400 font-mono mt-1" id="timeline-display">
+                  Estimated Sprint: 7 to 12 Working Days
                 </div>
               </div>
 
-              <div class="mt-6 bg-blue-500/10 border border-blue-500/20 rounded-xl p-3 text-[11px] text-cyan-300">
-                💡 <strong>Zero risk guarantee:</strong> 50% deposit to commence work, remaining 50% only after you review and approve the final product!
+              <!-- Scope Summary Breakdown -->
+              <div class="mt-6 pt-6 border-t border-white/10 space-y-2 text-xs text-gray-300">
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Architecture:</span>
+                  <span class="font-bold text-white" id="summary-type">Web Application</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Target Scale:</span>
+                  <span class="font-bold text-white" id="summary-scale">Business Grade</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Source Code:</span>
+                  <span class="font-bold text-cyan-300">100% Client Ownership</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Milestone Term:</span>
+                  <span class="font-bold text-cyan-300">Zero Risk Escrow Sprint</span>
+                </div>
+              </div>
+
+              <div class="mt-6 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-[11px] text-gray-300">
+                🛡️ <strong>Milestone Guarantee:</strong> Payments split across agreed sprint deliverables. You only approve payments once milestones are demonstrated live.
               </div>
             </div>
 
-            <div class="mt-8 space-y-3">
-              <button onclick="sendWhatsAppQuote()" class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs tracking-wide shadow-lg shadow-[#25D366]/30 transition-all flex items-center justify-center gap-2">
-                <span>💬 Lock This Quote on WhatsApp</span>
-              </button>
-
-              <a href="#contact" class="w-full py-2.5 px-4 rounded-xl border border-white/10 hover:border-white/20 text-gray-300 text-center text-xs font-semibold block transition-colors">
-                Or Submit In-depth Details
+            <!-- WhatsApp 1-Click Dispatch -->
+            <div class="mt-8 pt-6 border-t border-white/10 space-y-3">
+              <a href="#" id="whatsapp-dispatch-btn" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs tracking-wide flex items-center justify-center gap-2 transition-all shadow-lg shadow-[#25D366]/20">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Dispatch Spec to WhatsApp</span>
               </a>
+              <div class="text-[11px] text-center text-gray-400">
+                Direct hotline to Lead Engineer: <strong class="text-white">+977 9851355569</strong>
+              </div>
             </div>
 
           </div>
 
         </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- LIVE PORTFOLIO & WORK SHOWCASE -->
-  <section id="portfolio" class="py-24 bg-dark-800/40 border-t border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Recent Showcase</span>
-          <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-4 tracking-tight">Our Proven Work & Prototypes</h2>
-          <p class="text-gray-400 mt-2 text-sm max-w-xl">Every project we ship is engineered for high conversion, ultra-fast performance, and optimal search ranking.</p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-2 text-xs font-semibold">
-          <button class="portfolio-tab active px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-md shadow-blue-500/25" data-filter="all">All Projects</button>
-          <button class="portfolio-tab px-4 py-2 rounded-xl bg-white/5 text-gray-300 hover:bg-white/10" data-filter="ecommerce">E-Commerce</button>
-          <button class="portfolio-tab px-4 py-2 rounded-xl bg-white/5 text-gray-300 hover:bg-white/10" data-filter="corporate">Corporate</button>
-          <button class="portfolio-tab px-4 py-2 rounded-xl bg-white/5 text-gray-300 hover:bg-white/10" data-filter="apps">Mobile Apps</button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
-        
-        <!-- Project 1 -->
-        <div class="glass-card rounded-2xl overflow-hidden group" data-category="ecommerce">
-          <div class="h-48 bg-gradient-to-tr from-slate-800 to-indigo-950 p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-blue-600/20 transition-colors"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[10px] font-bold bg-white/20 text-white px-2.5 py-1 rounded-full uppercase">E-Commerce Store</span>
-              <span class="text-xs font-bold text-cyan-400">eSewa • Khalti</span>
-            </div>
-            <div class="z-10">
-              <h4 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Himalayan Outdoor Gear</h4>
-              <p class="text-xs text-gray-300 mt-1">Adventure apparel store with digital payments & live order tracking</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-gray-400 mb-4">
-              <span>Stack: Next.js, Tailwind, Node</span>
-              <span class="text-cyan-400 font-bold">Speed: 98/100</span>
-            </div>
-            <button onclick="openDemoModal('Himalayan Outdoor Gear', 'Full-scale e-commerce store equipped with real-time stock inventory, instant eSewa/Khalti checkout, automatic PDF invoice dispatch, and mobile-friendly merchant dashboard.', 'Next.js 14, Tailwind CSS, PostgreSQL, eSewa Merchant API')" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-xs transition-colors">
-              View Case Study &rarr;
-            </button>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="glass-card rounded-2xl overflow-hidden group" data-category="corporate">
-          <div class="h-48 bg-gradient-to-tr from-slate-800 to-cyan-950 p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute inset-0 bg-cyan-600/10 group-hover:bg-cyan-600/20 transition-colors"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[10px] font-bold bg-white/20 text-white px-2.5 py-1 rounded-full uppercase">Travel & Trekking</span>
-              <span class="text-xs font-bold text-cyan-400">Booking Engine</span>
-            </div>
-            <div class="z-10">
-              <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Apex Annapurna Expeditions</h4>
-              <p class="text-xs text-gray-300 mt-1">Custom itinerary planner, group booking & inquiry CRM</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-gray-400 mb-4">
-              <span>Stack: WordPress, Headless API</span>
-              <span class="text-cyan-400 font-bold">SEO: Ranked #1</span>
-            </div>
-            <button onclick="openDemoModal('Apex Annapurna Expeditions', 'Tour and trekking platform featuring day-by-day altitude maps, instant WhatsApp quotation generator, customer reviews, and multi-currency deposit processing.', 'WordPress, Custom PHP/React components, Cloudflare Edge')" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-xs transition-colors">
-              View Case Study &rarr;
-            </button>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="glass-card rounded-2xl overflow-hidden group" data-category="apps">
-          <div class="h-48 bg-gradient-to-tr from-slate-800 to-purple-950 p-6 flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute inset-0 bg-purple-600/10 group-hover:bg-purple-600/20 transition-colors"></div>
-            <div class="flex justify-between items-start z-10">
-              <span class="text-[10px] font-bold bg-white/20 text-white px-2.5 py-1 rounded-full uppercase">Mobile App</span>
-              <span class="text-xs font-bold text-purple-400">Android & iOS</span>
-            </div>
-            <div class="z-10">
-              <h4 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">Foodie Express Nepal</h4>
-              <p class="text-xs text-gray-300 mt-1">On-demand food delivery with live GPS rider tracking</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between text-xs text-gray-400 mb-4">
-              <span>Stack: Flutter, Firebase, Node.js</span>
-              <span class="text-cyan-400 font-bold">4.8 ★ App Store</span>
-            </div>
-            <button onclick="openDemoModal('Foodie Express Nepal', 'Cross-platform food ordering app with customer app, rider delivery app, and restaurant merchant tablet portal. Includes real-time push alerts and OTP SMS login.', 'Flutter, Node.js, WebSockets, Google Maps API')" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-xs transition-colors">
-              View Case Study &rarr;
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TRANSPARENT PRICING PACKAGES -->
-  <section id="pricing" class="py-24 relative">
+  <!-- 4-STEP LAB SPRINT (HOW WE WORK) -->
+  <section id="process" class="relative py-24 z-10 bg-dark-950/50 border-y border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Clear & Transparent Pricing</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-4 tracking-tight">Invest in Quality That Pays For Itself</h2>
-        <p class="text-gray-400 mt-4 text-base">No hidden charges, no surprise fees. Free 1-year hosting included in all website packages.</p>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+          Engineering Lifecycle
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+          The Goinfi Labs 4-Step Sprint
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-400">
+          From concept to production launch in clean, transparent, milestone-gated sprints.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         
-        <!-- Package 1: Starter -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Starter Web</div>
-            <h3 class="text-2xl font-bold font-heading text-white mt-2">Corporate Presence</h3>
-            <p class="text-xs text-gray-400 mt-2">Ideal for local businesses, schools, clinics & consultancy firms.</p>
-
-            <div class="mt-6 mb-8 pb-6 border-b border-white/10">
-              <span class="text-4xl font-extrabold font-heading text-white">Rs. 14,999</span>
-              <span class="text-xs text-gray-400 block mt-1">One-time • 3 to 5 Days Delivery</span>
-            </div>
-
-            <ul class="space-y-3 text-xs text-gray-300">
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Up to 6 Custom Responsive Pages</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> <strong>Free 1-Year NVMe SSD Cloud Hosting</strong></li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Free Domain (.com.np setup or .com guidance)</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> 2 Official Business Emails (info@...)</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Direct WhatsApp Chat Button</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Google Maps & Contact Form</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> 3 Months Free Technical Support</li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20am%20interested%20in%20the%20Starter%20Corporate%20Package%20(Rs.%2014,999)." target="_blank" class="mt-8 w-full py-3.5 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-blue-500/10 text-white font-bold text-xs text-center transition-all">
-            Choose Starter Package
-          </a>
-        </div>
-
-        <!-- Package 2: E-Commerce Pro (Most Popular) -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border-blue-500 shadow-2xl shadow-blue-500/20 bg-dark-800">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-full shadow-md">
-            Most Popular Choice
-          </div>
-
-          <div>
-            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider">E-Commerce Pro</div>
-            <h3 class="text-2xl font-bold font-heading text-white mt-2">Full Online Store</h3>
-            <p class="text-xs text-gray-400 mt-2">Everything required to sell products online with automated payments.</p>
-
-            <div class="mt-6 mb-8 pb-6 border-b border-white/10">
-              <span class="text-4xl font-extrabold font-heading text-cyan-400">Rs. 34,999</span>
-              <span class="text-xs text-gray-400 block mt-1">One-time • 6 to 8 Days Delivery</span>
-            </div>
-
-            <ul class="space-y-3 text-xs text-gray-300">
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Unlimited Product Catalog & Categories</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> <strong>eSewa & Khalti Automated Merchant Gateway</strong></li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Easy Admin Panel (Add/edit items in 1 minute)</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Cash on Delivery (COD) & Courier Tracker</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Automated PDF Invoicing & Email/SMS Receipt</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> <strong>Free 1-Year Fast Cloud Hosting & SSL</strong></li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> 6 Months Free Priority Support</li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20am%20interested%20in%20the%20E-Commerce%20Pro%20Package%20(Rs.%2034,999)." target="_blank" class="mt-8 w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs text-center glow-btn transition-all">
-            Order E-Commerce Pro
-          </a>
-        </div>
-
-        <!-- Package 3: Custom App / Enterprise -->
-        <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold text-purple-400 uppercase tracking-wider">Mobile & Cloud</div>
-            <h3 class="text-2xl font-bold font-heading text-white mt-2">Custom App & Software</h3>
-            <p class="text-xs text-gray-400 mt-2">Tailored Android/iOS apps, SaaS portals, and custom APIs.</p>
-
-            <div class="mt-6 mb-8 pb-6 border-b border-white/10">
-              <span class="text-4xl font-extrabold font-heading text-white">Rs. 69,999+</span>
-              <span class="text-xs text-gray-400 block mt-1">Based on specifications • 15 to 25 Days</span>
-            </div>
-
-            <ul class="space-y-3 text-xs text-gray-300">
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Android & iOS Cross-Platform App (Flutter)</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Custom Web Dashboard & Super-Admin</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Cloud Database with Automatic Scaling</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Google Play & Apple App Store Publishing</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> Dedicated VPS Server Configuration</li>
-              <li class="flex items-center gap-2.5"><span class="text-cyan-400 font-bold">✓</span> 1 Year Full Software Warranty</li>
-            </ul>
-          </div>
-
-          <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20have%20a%20custom%20app/software%20requirement%20to%20discuss." target="_blank" class="mt-8 w-full py-3.5 rounded-xl border border-white/10 hover:border-purple-500 hover:bg-purple-500/10 text-white font-bold text-xs text-center transition-all">
-            Schedule Architecture Call
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CLOUD HOSTING PILLAR (Annual Recurring Revenue Generator) -->
-  <section id="hosting" class="py-24 bg-dark-800/40 border-t border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="text-xs font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full">Goinfi Cloud Infrastructure</span>
-          <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white mt-4 tracking-tight">Need Only Fast & Reliable Hosting?</h2>
-          <p class="text-gray-300 mt-4 text-base leading-relaxed">
-            Already have a website or app? Migrate to Goinfi Cloud for <strong>3x faster load times</strong>, pure NVMe SSD drives, automated daily backups, and free migration assistance.
+        <!-- Step 1 -->
+        <div class="lab-card p-6 rounded-2xl relative">
+          <div class="text-3xl font-extrabold font-heading text-cyan-400/40 mb-3">01</div>
+          <h4 class="text-lg font-bold font-heading text-white mb-2">Scope & Blueprint</h4>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            We map technical requirements, database architecture, third-party API contracts, and provide an exact fixed-scope roadmap.
           </p>
-
-          <div class="mt-8 grid grid-cols-2 gap-4">
-            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-              <div class="text-2xl font-black text-cyan-400 font-heading">99.98%</div>
-              <div class="text-xs text-gray-400 mt-1">Guaranteed Server Uptime</div>
-            </div>
-            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-              <div class="text-2xl font-black text-blue-400 font-heading">&lt; 350ms</div>
-              <div class="text-xs text-gray-400 mt-1">Average Response Latency</div>
-            </div>
-          </div>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20want%20to%20order%20or%20migrate%20to%20Goinfi%20Cloud%20Hosting." target="_blank" class="px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs tracking-wide transition-all shadow-lg shadow-purple-600/30">
-              Get Hosting Plan (Rs. 4,999/yr)
-            </a>
-            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 font-bold text-xs border border-white/10 transition-all">
-              Request Free Migration
-            </a>
-          </div>
         </div>
 
-        <!-- Hosting Feature Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="glass-card p-6 rounded-2xl">
-            <div class="text-2xl mb-3">🚀</div>
-            <h4 class="text-base font-bold text-white">NVMe Pure Storage</h4>
-            <p class="text-xs text-gray-400 mt-1">Up to 10x faster disk I/O compared to outdated SATA SSD hosts.</p>
-          </div>
-
-          <div class="glass-card p-6 rounded-2xl">
-            <div class="text-2xl mb-3">🔒</div>
-            <h4 class="text-base font-bold text-white">Free SSL & DDoS Shield</h4>
-            <p class="text-xs text-gray-400 mt-1">Automated HTTPS encryption certificate and anti-bot mitigation.</p>
-          </div>
-
-          <div class="glass-card p-6 rounded-2xl">
-            <div class="text-2xl mb-3">💾</div>
-            <h4 class="text-base font-bold text-white">Automated Daily Backups</h4>
-            <p class="text-xs text-gray-400 mt-1">Your website files and database safely backed up every 24 hours.</p>
-          </div>
-
-          <div class="glass-card p-6 rounded-2xl">
-            <div class="text-2xl mb-3">✉️</div>
-            <h4 class="text-base font-bold text-white">Business Emails Included</h4>
-            <p class="text-xs text-gray-400 mt-1">Send professional proposals from your own domain email address.</p>
-          </div>
+        <!-- Step 2 -->
+        <div class="lab-card p-6 rounded-2xl relative">
+          <div class="text-3xl font-extrabold font-heading text-blue-400/40 mb-3">02</div>
+          <h4 class="text-lg font-bold font-heading text-white mb-2">UI/UX Prototype</h4>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Interactive high-fidelity wireframes and design systems. You test user flows and click-through prototypes before code is written.
+          </p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY GOINFI? (Comparison Section) -->
-  <section class="py-24 relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">The Goinfi Advantage</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-4 tracking-tight">Why Choose Goinfi Over Others?</h2>
-      </div>
-
-      <div class="glass-card rounded-3xl overflow-hidden border border-white/10">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs">
-            <thead>
-              <tr class="border-b border-white/10 bg-white/5 text-gray-300 font-bold uppercase tracking-wider">
-                <th class="p-4 sm:p-6">Feature / Deliverable</th>
-                <th class="p-4 sm:p-6 text-cyan-400 bg-blue-500/10">Goinfi (Our Standard)</th>
-                <th class="p-4 sm:p-6 text-gray-400">Freelance Market</th>
-                <th class="p-4 sm:p-6 text-gray-400">Large Agencies</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/5 text-gray-300">
-              <tr>
-                <td class="p-4 sm:p-6 font-semibold text-white">Delivery Speed</td>
-                <td class="p-4 sm:p-6 text-cyan-400 font-bold bg-blue-500/10">⚡ 3 - 7 Days</td>
-                <td class="p-4 sm:p-6">Unpredictable (Weeks/Months)</td>
-                <td class="p-4 sm:p-6">4 - 8 Weeks</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-6 font-semibold text-white">eSewa & Khalti Setup</td>
-                <td class="p-4 sm:p-6 text-cyan-400 font-bold bg-blue-500/10">✓ Included & Configured</td>
-                <td class="p-4 sm:p-6">Rarely supported / broken</td>
-                <td class="p-4 sm:p-6">Extra high setup fee</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-6 font-semibold text-white">Free Hosting & SSL</td>
-                <td class="p-4 sm:p-6 text-cyan-400 font-bold bg-blue-500/10">✓ 1 Year Free NVMe Cloud</td>
-                <td class="p-4 sm:p-6">Buy separately / self-manage</td>
-                <td class="p-4 sm:p-6">Expensive monthly retainer</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-6 font-semibold text-white">Post-Launch Support</td>
-                <td class="p-4 sm:p-6 text-cyan-400 font-bold bg-blue-500/10">✓ Direct WhatsApp Support</td>
-                <td class="p-4 sm:p-6">Ghosting after handover</td>
-                <td class="p-4 sm:p-6">Slow support tickets</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-6 font-semibold text-white">Price Transparency</td>
-                <td class="p-4 sm:p-6 text-cyan-400 font-bold bg-blue-500/10">✓ Clear fixed packages</td>
-                <td class="p-4 sm:p-6">Vague / hidden fees</td>
-                <td class="p-4 sm:p-6">Overpriced (1 Lakh+)</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Step 3 -->
+        <div class="lab-card p-6 rounded-2xl relative">
+          <div class="text-3xl font-extrabold font-heading text-cyan-400/40 mb-3">03</div>
+          <h4 class="text-lg font-bold font-heading text-white mb-2">Agile Sprint & QA</h4>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Production coding in clean TypeScript with automated unit tests, cross-device testing, and milestone demonstrations.
+          </p>
         </div>
+
+        <!-- Step 4 -->
+        <div class="lab-card p-6 rounded-2xl relative">
+          <div class="text-3xl font-extrabold font-heading text-blue-400/40 mb-3">04</div>
+          <h4 class="text-lg font-bold font-heading text-white mb-2">Deploy & 24/7 SLA</h4>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Live deployment on cloud infrastructure (or App Store/Play Store), full source code handoff, and ongoing SLA maintenance.
+          </p>
+        </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- CLIENT REVIEWS & SOCIAL PROOF -->
-  <section class="py-24 relative glow-gradient">
+  <!-- CLIENT GUARANTEES & TRUST (ZERO RISK) -->
+  <section id="guarantees" class="relative py-24 z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Client Success Stories</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-4 tracking-tight">Trusted by Fast-Growing Businesses</h2>
-        <p class="text-gray-400 mt-2 text-sm">See what our partners and business owners say about partnering with Goinfi IT.</p>
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+          Client Protection
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+          Zero-Risk Engineering Guarantees
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-400">
+          We treat your project with the highest level of professional ethics, security, and financial transparency.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
-              ★★★★★
-            </div>
-            <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-              "Goinfi IT delivered our complete multi-category e-commerce store with automated eSewa and Khalti integration in just 6 days. Our online sales doubled within the first month. Incredible speed and direct WhatsApp support!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm">
-              AS
-            </div>
-            <div>
-              <div class="text-sm font-bold text-white">Anish Shrestha</div>
-              <div class="text-[11px] text-cyan-400">Founder, Himalayan Apparel</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border-blue-500/30">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
-              ★★★★★
-            </div>
-            <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-              "Our trekking and expedition portal ranks on page 1 of Google for major Annapurna tour keywords. The NVMe hosting is blazing fast for our international clients booking from Europe and the US."
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-600 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-              SG
-            </div>
-            <div>
-              <div class="text-sm font-bold text-white">Sunita Gurung</div>
-              <div class="text-[11px] text-cyan-400">Director, Apex Expeditions Pokhara</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 text-sm mb-4">
-              ★★★★★
-            </div>
-            <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-              "Working with Goinfi IT was seamless. They engineered a high-performance cross-platform mobile app with clean code, zero bugs, and delivered right on schedule. Best technical team in the region!"
-            </p>
-          </div>
-          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
-              RK
-            </div>
-            <div>
-              <div class="text-sm font-bold text-white">Rajesh Karki</div>
-              <div class="text-[11px] text-cyan-400">CTO, QuickBite Delivery</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION (100% English) -->
-  <section id="faq" class="py-24 bg-dark-800/40 border-t border-b border-white/5">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center mb-16">
-        <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Frequently Asked Questions</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-4 tracking-tight">Everything You Need to Know</h2>
-      </div>
-
-      <div class="space-y-4" id="faqAccordion">
         
-        <div class="glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
-          <div class="flex justify-between items-center">
-            <h4 class="text-sm font-bold text-white">How long does it take to design and launch a website?</h4>
-            <span class="text-cyan-400 text-lg font-bold transition-transform">+</span>
+        <div class="lab-card p-8 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-cyan-400 text-xl mb-6">
+            ⚖️
           </div>
-          <div class="faq-content hidden mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 leading-relaxed">
-            Standard corporate websites are typically designed and launched within 3 to 5 business days. Full e-commerce stores with automated eSewa, Khalti, and card merchant integrations require approximately 6 to 8 days. Mobile applications depend on feature scope but average 15 to 25 business days.
-          </div>
+          <h3 class="text-xl font-bold font-heading text-white mb-2">100% IP & Code Ownership</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Every repository, database schema, design asset, and line of code belongs exclusively to you. We deliver clean Git repositories with zero vendor lock-in.
+          </p>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
-          <div class="flex justify-between items-center">
-            <h4 class="text-sm font-bold text-white">Can I easily update photos, products, and text myself later?</h4>
-            <span class="text-cyan-400 text-lg font-bold transition-transform">+</span>
+        <div class="lab-card p-8 rounded-2xl border-cyan-500/30">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-6">
+            🔒
           </div>
-          <div class="faq-content hidden mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 leading-relaxed">
-            Yes, absolutely! We build all websites with a modern, intuitive visual admin panel. You can easily add or edit products, update prices, change phone numbers, and upload photos in just a few clicks without writing a single line of code. We also provide a complimentary walkthrough video tutorial.
-          </div>
+          <h3 class="text-xl font-bold font-heading text-white mb-2">NDA & Data Protection</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            We sign strict Non-Disclosure Agreements before reviewing your product specifications, ensuring your proprietary ideas and trade secrets remain confidential.
+          </p>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
-          <div class="flex justify-between items-center">
-            <h4 class="text-sm font-bold text-white">How does the payment schedule work? Do I pay everything upfront?</h4>
-            <span class="text-cyan-400 text-lg font-bold transition-transform">+</span>
+        <div class="lab-card p-8 rounded-2xl">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-cyan-400 text-xl mb-6">
+            💎
           </div>
-          <div class="faq-content hidden mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 leading-relaxed">
-            No, you do not pay everything upfront. We operate on a milestone basis: a 50% deposit is required to kick off the design and development phase, and the remaining 50% balance is only due after you thoroughly review, test, and approve the finished project before live launch. Payments can be made via Bank Transfer, eSewa, Khalti, or Fonepay QR.
-          </div>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
-          <div class="flex justify-between items-center">
-            <h4 class="text-sm font-bold text-white">What are the annual hosting and domain renewal fees after year 1?</h4>
-            <span class="text-cyan-400 text-lg font-bold transition-transform">+</span>
-          </div>
-          <div class="faq-content hidden mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 leading-relaxed">
-            Your first year includes complimentary high-speed NVMe cloud hosting, SSL encryption, and business email. Starting in year two, annual renewal for managed enterprise cloud hosting, daily automated backups, security patching, and server maintenance is just Rs. 4,999 per year.
-          </div>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
-          <div class="flex justify-between items-center">
-            <h4 class="text-sm font-bold text-white">Do I retain 100% full ownership of my website and domain?</h4>
-            <span class="text-cyan-400 text-lg font-bold transition-transform">+</span>
-          </div>
-          <div class="faq-content hidden mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 leading-relaxed">
-            Yes, 100%. All source code, media assets, domain registration rights, and database contents are your exclusive property upon project completion. There are no vendor lock-ins or hidden licensing royalties.
-          </div>
+          <h3 class="text-xl font-bold font-heading text-white mb-2">Milestone Escrow Terms</h3>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Never pay for unverified work. Payments are broken down into staged milestones (e.g., 30% kickoff, 40% functional demo, 30% final sign-off).
+          </p>
         </div>
 
       </div>
@@ -1097,91 +863,76 @@
     </div>
   </section>
 
-  <!-- DIRECT CONTACT & LEAD INQUIRY -->
-  <section id="contact" class="py-24 relative glow-gradient">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- PROJECT INTAKE & CONSULTATION FORM -->
+  <section id="contact" class="relative py-28 z-10 bg-dark-950/60 border-t border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl">
-        <div class="text-center max-w-xl mx-auto mb-10">
-          <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">Let's Build Something Great</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-4 tracking-tight">Ready to Take Your Business Online?</h2>
-          <p class="text-gray-400 mt-2 text-sm">Send us your project specifications and our engineering team will provide a free prototype plan and consultation within 4 hours!</p>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+          Start Your Project
         </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+          Let’s Build Something Exceptional
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-gray-300">
+          Fill in your project details below or jump straight onto WhatsApp for an immediate technical discovery call with our team.
+        </p>
+      </div>
 
-        <!-- 1-Click WhatsApp Instant Topic Buttons -->
-        <div class="mb-8 p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
-          <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-3">
-            Prefer Quick WhatsApp Chat? Pick a topic for instant response:
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-2.5">
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20Could%20you%20please%20share%20some%20live%20demo%20links%20and%20case%20studies%20of%20past%20projects?" target="_blank" class="px-3.5 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-xs text-cyan-300 font-semibold transition-all hover:scale-105 flex items-center gap-1.5">
-              <span>📂</span>
-              <span>Ask for Live Demos</span>
-            </a>
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20am%20interested%20in%20building%20an%20E-Commerce%20store%20with%20eSewa%20and%20Khalti%20integration." target="_blank" class="px-3.5 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-xs text-emerald-300 font-semibold transition-all hover:scale-105 flex items-center gap-1.5">
-              <span>🛒</span>
-              <span>E-Commerce with eSewa/Khalti</span>
-            </a>
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20have%20an%20idea%20for%20a%20custom%20Android%20and%20iOS%20mobile%20app%20project." target="_blank" class="px-3.5 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-xs text-purple-300 font-semibold transition-all hover:scale-105 flex items-center gap-1.5">
-              <span>📱</span>
-              <span>Custom Mobile App</span>
-            </a>
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20would%20like%20to%20schedule%20a%20free%2015-minute%20technical%20consultation%20call." target="_blank" class="px-3.5 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-xs text-cyan-300 font-semibold transition-all hover:scale-105 flex items-center gap-1.5">
-              <span>📞</span>
-              <span>15-Min Free Tech Call</span>
-            </a>
-          </div>
-        </div>
-
-        <form id="leadForm" onsubmit="handleLeadSubmit(event)" class="space-y-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="lab-card rounded-3xl p-8 sm:p-12 border border-cyan-500/30">
+        
+        <form id="project-intake-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Your Name / Organization *</label>
-              <input type="text" id="leadName" required placeholder="e.g. Ramesh Sharma" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Your Name / Organization</label>
+              <input type="text" id="form-name" required placeholder="e.g. Suman Sharma / Tech Corp" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 focus:border-cyan-400 text-white text-sm outline-none transition-colors" />
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Phone / WhatsApp Number *</label>
-              <input type="tel" id="leadPhone" required placeholder="e.g. 9851355569" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">WhatsApp or Phone Number</label>
+              <input type="tel" id="form-phone" required placeholder="+977 98XXXXXXXX" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 focus:border-cyan-400 text-white text-sm outline-none transition-colors" />
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Service Required</label>
-              <select id="leadService" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
-                <option value="Business Website (Rs. 14,999)">Business / Corporate Website (Rs. 14,999)</option>
-                <option value="E-Commerce Store (Rs. 34,999)">E-Commerce Store with eSewa/Khalti (Rs. 34,999)</option>
-                <option value="Mobile App (Android/iOS)">Mobile App Development (Android & iOS)</option>
-                <option value="Cloud Hosting & Domain">Managed Cloud Hosting & Domain</option>
-                <option value="Other Custom Project">Other Custom Software / Portal</option>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Project Domain</label>
+              <select id="form-category" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 focus:border-cyan-400 text-white text-sm outline-none transition-colors">
+                <option value="Web Page / Web App Development">Web Page / Web App Development</option>
+                <option value="Custom Enterprise Software">Custom Enterprise Software</option>
+                <option value="Mobile App (iOS & Android)">Mobile App (iOS & Android)</option>
+                <option value="Full-Stack Digital Transformation">Full-Stack Digital Transformation</option>
               </select>
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Email Address (Optional)</label>
-              <input type="email" id="leadEmail" placeholder="yourname@gmail.com" class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors" />
+              <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Target Budget Range</label>
+              <select id="form-budget" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 focus:border-cyan-400 text-white text-sm outline-none transition-colors">
+                <option value="NPR 25,000 - 50,000">NPR 25,000 - 50,000 ($200 - $400)</option>
+                <option value="NPR 50,000 - 100,000">NPR 50,000 - 100,000 ($400 - $800)</option>
+                <option value="NPR 100,000 - 250,000+">NPR 100,000 - 250,000+ ($800 - $2,000+)</option>
+                <option value="Enterprise Custom Quote">Enterprise Custom Quote</option>
+              </select>
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Brief Project Idea / Special Features</label>
-            <textarea id="leadNotes" rows="3" placeholder="Tell us briefly about your business, required pages, or specific features..." class="w-full bg-dark-900 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Brief Project Overview / Core Features</label>
+            <textarea id="form-details" rows="4" placeholder="Describe the goal of the project, required features, or reference websites..." class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 focus:border-cyan-400 text-white text-sm outline-none transition-colors"></textarea>
           </div>
 
-          <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
-            <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wide shadow-lg shadow-blue-500/25 transition-all">
-              🚀 Submit Inquiry (Get Free Consultation)
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+            <div class="text-xs text-gray-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Direct response within 2 hours guaranteed.</span>
+            </div>
+
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wider uppercase glow-btn transition-all">
+              Submit Project Scope &rarr;
             </button>
-
-            <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20team!%20I%20want%20to%20inquire%20about%20a%20website%20or%20app%20project." target="_blank" class="w-full sm:w-auto px-6 py-4 rounded-xl border border-[#25D366]/50 hover:bg-[#25D366]/15 text-[#25D366] hover:text-white font-bold text-xs text-center transition-all flex items-center justify-center gap-2">
-              <span>💬 Or Chat Instantly on WhatsApp</span>
-            </a>
           </div>
 
-          <div id="leadSuccessAlert" class="hidden p-4 rounded-xl bg-blue-500/20 border border-blue-500/40 text-cyan-300 text-xs font-medium">
-            ✅ <strong>Thank you!</strong> Your inquiry has been received. A Goinfi technology consultant will contact you via WhatsApp or phone shortly!
-          </div>
         </form>
 
       </div>
@@ -1190,256 +941,276 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-12 text-xs text-gray-400">
+  <footer class="relative z-10 bg-dark-950 border-t border-white/10 pt-16 pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
         
-        <!-- Col 1 -->
-        <div class="md:col-span-1">
-          <div class="mb-4">
-            <img src="logo.png" alt="Goinfi IT Logo" class="h-9 w-auto object-contain" />
+        <!-- Brand Col -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Goinfi Logo" class="h-8 w-auto object-contain" />
+            <span class="text-xl font-extrabold font-heading text-white">GOINFI<span class="text-cyan-400">LABS</span></span>
           </div>
-          <p class="text-gray-400 leading-relaxed mb-3 text-xs">
-            Goinfi IT is the dedicated enterprise software, web engineering, and cloud infrastructure arm of the <strong>Goinfi Digital Network</strong>.
+          <p class="text-xs text-gray-400 max-w-md leading-relaxed">
+            Goinfi Labs is the dedicated digital engineering and software innovation arm of <strong>Goinfi</strong>. We build world-class web applications, custom enterprise software, and mobile apps for visionary founders and forward-thinking enterprises.
           </p>
-          <div class="space-y-1.5 pt-1 text-xs">
-            <div class="text-gray-300 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>Parent Brand: <a href="https://goinfi.biz" target="_blank" class="text-cyan-400 font-bold hover:underline">goinfi.biz</a></span>
-            </div>
-            <div class="text-gray-400">Official Domain: <span class="text-white font-semibold">it.goinfi.biz</span></div>
+          <div class="flex items-center gap-2 text-xs text-cyan-300 font-semibold">
+            <span>Parent Ecosystem:</span>
+            <a href="https://goinfi.biz" target="_blank" class="hover:underline font-bold text-white">goinfi.biz</a>
           </div>
         </div>
 
-        <!-- Col 2 -->
+        <!-- Solutions -->
         <div>
-          <h5 class="text-white font-bold uppercase tracking-wider mb-4">Services</h5>
-          <ul class="space-y-2.5">
-            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Corporate Websites</a></li>
-            <li><a href="#services" class="hover:text-cyan-400 transition-colors">E-Commerce with eSewa & Khalti</a></li>
-            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Mobile Apps (Android & iOS)</a></li>
-            <li><a href="#hosting" class="hover:text-cyan-400 transition-colors">NVMe Cloud Hosting</a></li>
-            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Search Engine Optimization (SEO)</a></li>
+          <h4 class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-4">Core Solutions</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="#pillars" class="hover:text-white transition-colors">Web App Development</a></li>
+            <li><a href="#pillars" class="hover:text-white transition-colors">Custom Enterprise Software</a></li>
+            <li><a href="#pillars" class="hover:text-white transition-colors">iOS & Android Apps (Flutter)</a></li>
+            <li><a href="#pillars" class="hover:text-white transition-colors">Payment Gateway Integration</a></li>
+            <li><a href="#pillars" class="hover:text-white transition-colors">Cloud DevOps Architecture</a></li>
           </ul>
         </div>
 
-        <!-- Col 3 -->
+        <!-- Ecosystem & Contact -->
         <div>
-          <h5 class="text-white font-bold uppercase tracking-wider mb-4">Pricing & Tools</h5>
-          <ul class="space-y-2.5">
-            <li><a href="#quote-calculator" class="hover:text-cyan-400 transition-colors">Live Cost Estimator</a></li>
-            <li><a href="#pricing" class="hover:text-cyan-400 transition-colors">Starter Package (Rs. 14,999)</a></li>
-            <li><a href="#pricing" class="hover:text-cyan-400 transition-colors">E-Commerce Pro (Rs. 34,999)</a></li>
-            <li><a href="#hosting" class="hover:text-cyan-400 transition-colors">Cloud Hosting (Rs. 4,999/yr)</a></li>
-            <li><a href="#faq" class="hover:text-cyan-400 transition-colors">Frequently Asked Questions</a></li>
+          <h4 class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-4">Direct Contacts</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li>WhatsApp: <a href="https://wa.me/9779851355569" class="text-white hover:text-cyan-300 font-semibold">+977 9851355569</a></li>
+            <li>Email: <a href="mailto:support@goinfi.biz" class="text-white hover:text-cyan-300 font-semibold">support@goinfi.biz</a></li>
+            <li>Ecosystem: <a href="https://goinfi.biz" target="_blank" class="text-cyan-400 hover:underline">Goinfi Ecosystem</a></li>
+            <li>Location: Kathmandu & Pokhara, Nepal</li>
           </ul>
-        </div>
-
-        <!-- Col 4 -->
-        <div>
-          <h5 class="text-white font-bold uppercase tracking-wider mb-4">Contact & Support</h5>
-          <p class="mb-2">📍 Kathmandu & Pokhara, Nepal</p>
-          <p class="mb-2">📧 support@goinfi.biz</p>
-          <p class="mb-2">💬 WhatsApp: +977 9851355569</p>
-          <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 badge-pulse"></span>
-            <span class="text-cyan-400 font-semibold text-[11px]">Accepting New Projects for 2026</span>
-          </div>
         </div>
 
       </div>
 
-      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500">
-        <div>&copy; 2026 Goinfi IT — An Enterprise Technology Division of <a href="https://goinfi.biz" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors font-semibold">Goinfi (goinfi.biz)</a>. All rights reserved.</div>
-        <div class="flex gap-6">
-          <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-          <a href="#" class="hover:text-gray-300">Terms of Service</a>
-          <a href="https://goinfi.biz" target="_blank" class="hover:text-cyan-400">Goinfi Ecosystem</a>
-          <a href="#quote-calculator" class="hover:text-gray-300">Get Quote</a>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <div>
+          &copy; 2026 <strong>Goinfi Labs</strong>. A Goinfi Enterprise (<a href="https://goinfi.biz" target="_blank" class="text-gray-400 hover:underline">goinfi.biz</a>). All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#pillars" class="hover:text-gray-300">Capabilities</a>
+          <a href="#estimator" class="hover:text-gray-300">Cost Estimator</a>
+          <a href="#contact" class="hover:text-gray-300">Start Project</a>
         </div>
       </div>
+
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Official WhatsApp Green #25D366) -->
-  <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20IT!%20I%20want%20to%20discuss%20a%20website%20or%20mobile%20app%20project." target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold px-4 py-3.5 rounded-full shadow-2xl shadow-[#25D366]/40 hover:scale-105 transition-all group" title="Chat on WhatsApp">
-    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    <span class="text-xs font-black tracking-wide hidden sm:inline">WhatsApp Chat</span>
-    <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+  <!-- FLOATING OFFICIAL WHATSAPP BUTTON -->
+  <a href="https://wa.me/9779851355569?text=Hello%20Goinfi%20Labs!%20I%20want%20to%20consult%20on%20a%20new%20project." target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white px-4 py-3 rounded-full shadow-2xl shadow-[#25D366]/40 hover:scale-105 transition-all group">
+    <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <div class="text-left leading-tight hidden sm:block">
+      <div class="text-[10px] uppercase font-bold tracking-wider text-emerald-100">Live Consultation</div>
+      <div class="text-xs font-extrabold text-white">Chat on WhatsApp</div>
+    </div>
   </a>
 
-  <!-- CASE STUDY MODAL -->
-  <div id="demoModal" class="fixed inset-0 bg-dark-900/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
-    <div class="glass-card rounded-3xl max-w-lg w-full p-8 border border-white/20 shadow-2xl relative">
-      <button onclick="closeDemoModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl">✕</button>
-      <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Case Study & Demo</div>
-      <h3 id="modalTitle" class="text-xl font-bold font-heading text-white">Project Name</h3>
-      <p id="modalDesc" class="text-xs text-gray-300 mt-4 leading-relaxed"></p>
-      
-      <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 text-xs">
-        <span class="text-gray-400 block mb-1">Architecture & Tech Stack:</span>
-        <strong id="modalStack" class="text-cyan-400"></strong>
-      </div>
-
-      <div class="mt-6 flex justify-end gap-3">
-        <button onclick="closeDemoModal()" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold">Close</button>
-        <a href="#quote-calculator" onclick="closeDemoModal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs">Build Similar Project</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- INTERACTIVE JAVASCRIPT: CYBER CANVAS & SCOPE CALCULATOR -->
   <script>
-    // Calculator State
-    let selectedBasePrice = 14999;
-    let selectedBaseDays = 5;
-    let selectedScaleMult = 1;
-    let projectTypeName = "Business Website";
+    // 1. INVOIDEA-STYLE DYNAMIC CYBER PARTICLES CANVAS
+    (function initCyberCanvas() {
+      const canvas = document.getElementById('cyberCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height, particles = [];
 
-    // Project Type Selector
-    document.querySelectorAll('#calcProjectType .calc-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('#calcProjectType .calc-btn').forEach(b => {
-          b.classList.remove('active', 'border-blue-500', 'bg-blue-500/15');
-          b.classList.add('border-white/10');
+      function resize() {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const particleCount = window.innerWidth < 768 ? 35 : 75;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          radius: Math.random() * 2 + 1,
+          alpha: Math.random() * 0.5 + 0.2
         });
-        btn.classList.add('active', 'border-blue-500', 'bg-blue-500/15');
-        btn.classList.remove('border-white/10');
-
-        selectedBasePrice = parseInt(btn.dataset.price);
-        selectedBaseDays = parseInt(btn.dataset.days);
-        projectTypeName = btn.querySelector('.font-bold').textContent;
-        updateCalculatorTotal();
-      });
-    });
-
-    // Scale Selector
-    document.querySelectorAll('#calcScale .calc-scale-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('#calcScale .calc-scale-btn').forEach(b => {
-          b.classList.remove('active', 'border-blue-500', 'bg-blue-500/15', 'text-white');
-          b.classList.add('border-white/10', 'text-gray-300');
-        });
-        btn.classList.add('active', 'border-blue-500', 'bg-blue-500/15', 'text-white');
-        btn.classList.remove('border-white/10', 'text-gray-300');
-
-        selectedScaleMult = parseFloat(btn.dataset.mult);
-        updateCalculatorTotal();
-      });
-    });
-
-    // Addons listeners
-    document.querySelectorAll('#calcAddons .addon-check').forEach(chk => {
-      chk.addEventListener('change', updateCalculatorTotal);
-    });
-
-    function updateCalculatorTotal() {
-      let total = Math.round(selectedBasePrice * selectedScaleMult);
-      let days = Math.round(selectedBaseDays * (selectedScaleMult > 1 ? 1.4 : 1));
-
-      // Check addons
-      if (document.getElementById('checkPayment')?.checked) total += 4500;
-      if (document.getElementById('checkChat')?.checked) total += 2500;
-      if (document.getElementById('checkSEO')?.checked) total += 3500;
-
-      document.getElementById('calcDisplayTotal').textContent = 'Rs. ' + total.toLocaleString('en-US');
-      document.getElementById('calcDisplayDays').textContent = `${days} - ${days + 3} Days`;
-    }
-
-    function sendWhatsAppQuote() {
-      const totalStr = document.getElementById('calcDisplayTotal').textContent;
-      const daysStr = document.getElementById('calcDisplayDays').textContent;
-      const paymentChecked = document.getElementById('checkPayment')?.checked ? "Yes" : "No";
-      const chatChecked = document.getElementById('checkChat')?.checked ? "Yes" : "No";
-      const seoChecked = document.getElementById('checkSEO')?.checked ? "Yes" : "No";
-
-      const message = `Hello Goinfi IT Team!%0A%0AI used your website Cost Estimator and would like to proceed with:%0A• Project: ${encodeURIComponent(projectTypeName)}%0A• Estimated Cost: ${encodeURIComponent(totalStr)}%0A• Timeline: ${encodeURIComponent(daysStr)}%0A• eSewa/Khalti: ${paymentChecked}%0A• WhatsApp Chat Widget: ${chatChecked}%0A• SEO Boost: ${seoChecked}%0A%0APlease confirm and let me know the next steps.`;
-
-      window.open(`https://wa.me/9779851355569?text=${message}`, '_blank');
-    }
-
-    // Lead Form Handler with Local Backup & WhatsApp Dispatch
-    function handleLeadSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('leadName').value;
-      const phone = document.getElementById('leadPhone').value;
-      const service = document.getElementById('leadService').value;
-      const email = document.getElementById('leadEmail')?.value || '';
-      const notes = document.getElementById('leadNotes').value;
-
-      // Safe local persistence backup
-      try {
-        const existingLeads = JSON.parse(localStorage.getItem('goinfi_leads') || '[]');
-        existingLeads.push({
-          name, phone, service, email, notes, timestamp: new Date().toISOString()
-        });
-        localStorage.setItem('goinfi_leads', JSON.stringify(existingLeads));
-      } catch (err) {
-        console.warn('Local backup note:', err);
       }
 
-      document.getElementById('leadSuccessAlert').classList.remove('hidden');
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
 
-      // Direct WhatsApp redirect with prefilled lead details
-      setTimeout(() => {
-        let msg = `Hello Goinfi IT Team!%0A%0AMy Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService Required: ${encodeURIComponent(service)}`;
-        if (email) msg += `%0AEmail: ${encodeURIComponent(email)}`;
-        if (notes) msg += `%0AProject Details: ${encodeURIComponent(notes)}`;
-        window.open(`https://wa.me/9779851355569?text=${msg}`, '_blank');
-      }, 1000);
-    }
+        // Update and draw particles
+        for (let i = 0; i < particles.length; i++) {
+          let p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
 
-    // FAQ Accordion
-    function toggleFaq(el) {
-      const content = el.querySelector('.faq-content');
-      const icon = el.querySelector('span');
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.textContent = '−';
-        icon.style.transform = 'rotate(180deg)';
-      } else {
-        content.classList.add('hidden');
-        icon.textContent = '+';
-        icon.style.transform = 'rotate(0deg)';
-      }
-    }
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
 
-    // Modal
-    function openDemoModal(title, desc, stack) {
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalDesc').textContent = desc;
-      document.getElementById('modalStack').textContent = stack;
-      const modal = document.getElementById('demoModal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(6, 182, 212, ${p.alpha})`;
+          ctx.fill();
 
-    function closeDemoModal() {
-      const modal = document.getElementById('demoModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    // Portfolio filter
-    document.querySelectorAll('.portfolio-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.portfolio-tab').forEach(t => {
-          t.classList.remove('active', 'bg-gradient-to-r', 'from-blue-600', 'to-cyan-600', 'text-white', 'shadow-md', 'shadow-blue-500/25');
-          t.classList.add('bg-white/5', 'text-gray-300');
-        });
-        tab.classList.add('active', 'bg-gradient-to-r', 'from-blue-600', 'to-cyan-600', 'text-white', 'shadow-md', 'shadow-blue-500/25');
-        tab.classList.remove('bg-white/5', 'text-gray-300');
-
-        const filter = tab.dataset.filter;
-        document.querySelectorAll('#portfolioGrid > div').forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
+          // Connect nearby particles with subtle cyber lines
+          for (let j = i + 1; j < particles.length; j++) {
+            let p2 = particles[j];
+            let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist < 110) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(0, 112, 243, ${0.15 * (1 - dist / 110)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
           }
-        });
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    // 2. PROJECT SCOPE & COST ESTIMATOR LOGIC
+    let currentType = 'web';
+    let currentScale = 'business';
+
+    function selectType(type) {
+      currentType = type;
+      ['web', 'software', 'app'].forEach(t => {
+        const btn = document.getElementById(`btn-type-${t}`);
+        if (t === type) {
+          btn.className = 'type-btn p-4 rounded-xl border border-blue-500 bg-blue-500/20 text-white font-semibold text-xs text-left transition-all flex flex-col justify-between';
+        } else {
+          btn.className = 'type-btn p-4 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all flex flex-col justify-between';
+        }
       });
-    });
+      calculateEstimate();
+    }
+
+    function selectScale(scale) {
+      currentScale = scale;
+      ['starter', 'business', 'enterprise'].forEach(s => {
+        const btn = document.getElementById(`btn-scale-${s}`);
+        if (s === scale) {
+          btn.className = 'scale-btn p-3.5 rounded-xl border border-blue-500 bg-blue-500/20 text-white font-semibold text-xs text-left transition-all';
+        } else {
+          btn.className = 'scale-btn p-3.5 rounded-xl border border-white/10 bg-white/5 text-gray-300 hover:text-white font-semibold text-xs text-left transition-all';
+        }
+      });
+      calculateEstimate();
+    }
+
+    function calculateEstimate() {
+      let basePrice = 0;
+      let timeline = '';
+      let typeLabel = '';
+      let scaleLabel = '';
+
+      // Type base
+      if (currentType === 'web') {
+        typeLabel = 'Web Application & Portal';
+        if (currentScale === 'starter') {
+          basePrice = 16999;
+          timeline = '3 to 5 Working Days';
+          scaleLabel = 'Starter MVP';
+        } else if (currentScale === 'business') {
+          basePrice = 34999;
+          timeline = '7 to 12 Working Days';
+          scaleLabel = 'Business Grade';
+        } else {
+          basePrice = 69999;
+          timeline = '15 to 25 Working Days';
+          scaleLabel = 'Enterprise Scale';
+        }
+      } else if (currentType === 'software') {
+        typeLabel = 'Custom Enterprise Software';
+        if (currentScale === 'starter') {
+          basePrice = 39999;
+          timeline = '10 to 14 Working Days';
+          scaleLabel = 'Starter MVP';
+        } else if (currentScale === 'business') {
+          basePrice = 79999;
+          timeline = '18 to 30 Working Days';
+          scaleLabel = 'Business Grade';
+        } else {
+          basePrice = 149999;
+          timeline = '30 to 60 Working Days';
+          scaleLabel = 'Enterprise Scale';
+        }
+      } else if (currentType === 'app') {
+        typeLabel = 'Mobile App (iOS & Android)';
+        if (currentScale === 'starter') {
+          basePrice = 49999;
+          timeline = '12 to 18 Working Days';
+          scaleLabel = 'Starter MVP';
+        } else if (currentScale === 'business') {
+          basePrice = 89999;
+          timeline = '20 to 35 Working Days';
+          scaleLabel = 'Business Grade';
+        } else {
+          basePrice = 179999;
+          timeline = '40 to 65 Working Days';
+          scaleLabel = 'Enterprise Scale';
+        }
+      }
+
+      // Addons
+      let addons = [];
+      if (document.getElementById('feat-payment')?.checked) {
+        basePrice += 4000;
+        addons.push('eSewa/Khalti/Stripe Gateway');
+      }
+      if (document.getElementById('feat-admin')?.checked) {
+        basePrice += 6000;
+        addons.push('Custom Admin & Analytics Dashboard');
+      }
+      if (document.getElementById('feat-auth')?.checked) {
+        basePrice += 3000;
+        addons.push('Auth & Role Management');
+      }
+      if (document.getElementById('feat-cloud')?.checked) {
+        basePrice += 7000;
+        addons.push('Cloud DevOps & CI/CD Architecture');
+      }
+
+      // Update UI displays
+      document.getElementById('price-display').innerText = `NPR ${basePrice.toLocaleString()}`;
+      document.getElementById('timeline-display').innerText = `Estimated Sprint: ${timeline}`;
+      document.getElementById('summary-type').innerText = typeLabel;
+      document.getElementById('summary-scale').innerText = scaleLabel;
+
+      // Update WhatsApp dispatch URL
+      const whatsappMsg = `Hello Goinfi Labs Team! 🚀%0A%0AI configured a project scope on your portal:%0A%0A• Project Type: ${encodeURIComponent(typeLabel)}%0A• Project Scale: ${encodeURIComponent(scaleLabel)}%0A• Estimated Budget: NPR ${basePrice.toLocaleString()}%0A• Timeline: ${encodeURIComponent(timeline)}%0A• Key Modules: ${encodeURIComponent(addons.join(', '))}%0A%0AI would like to review the technical blueprint and discuss kick-off terms.`;
+      
+      const dispatchBtn = document.getElementById('whatsapp-dispatch-btn');
+      if (dispatchBtn) {
+        dispatchBtn.href = `https://wa.me/9779851355569?text=${whatsappMsg}`;
+      }
+    }
+
+    // Initialize initial estimate
+    calculateEstimate();
+
+    // 3. PROJECT INTAKE FORM SUBMISSION
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const category = document.getElementById('form-category').value;
+      const budget = document.getElementById('form-budget').value;
+      const details = document.getElementById('form-details').value;
+
+      const whatsappText = `Hello Goinfi Labs! 🚀%0A%0ANew Project Consultation Request:%0A• Client / Org: ${encodeURIComponent(name)}%0A• Phone / WhatsApp: ${encodeURIComponent(phone)}%0A• Category: ${encodeURIComponent(category)}%0A• Target Budget: ${encodeURIComponent(budget)}%0A• Scope Details: ${encodeURIComponent(details)}`;
+
+      window.open(`https://wa.me/9779851355569?text=${whatsappText}`, '_blank');
+      alert('Thank you! Opening WhatsApp to connect you directly with our Lead Engineer.');
+    }
   </script>
+
 </body>
 </html>
