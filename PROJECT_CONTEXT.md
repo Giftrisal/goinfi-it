@@ -6,7 +6,7 @@
 ## Official Brand & Positioning
 - **Brand Name:** Goinfi Labs (formerly Goinfi IT)
 - **Parent Ecosystem:** Goinfi (`https://goinfi.biz`)
-- **Domain:** `https://it.goinfi.biz`
+- **Domain:** `https://labs.goinfi.biz`
 - **Primary Mission:** Client acquisition for high-value Web Development, Custom Software Engineering, and Mobile App Development projects.
 - **Lead WhatsApp:** `+977 9851355569`
 - **Email:** `support@goinfi.biz`
@@ -25,4 +25,4 @@
 
 ## Automated Deployment SOP:
 - Run `npm run deploy` (or `node deploy.js`).
-- Uploads updated `index.html`, `logo.png`, `sitemap.xml`, `robots.txt`, and `.htaccess` directly to `it.goinfi.biz` via FTP in seconds.
+- Uploads updated `index.html`, `logo.png`, `sitemap.xml`, `robots.txt`, and `.htaccess` directly to `labs.goinfi.biz` via FTP in seconds.

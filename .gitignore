@@ -3,3 +3,4 @@
 deploy.config.json
 
 *.bak
+.vercel
