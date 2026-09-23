@@ -112,44 +112,48 @@
       font-family: 'Outfit', sans-serif;
     }
 
-    /* Subtle Cyber Tech Grid */
+    /* High-Visibility Cyber Blueprint Grid */
     .cyber-grid {
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-      background-size: 50px 50px;
+        linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .cyber-dots {
+      background-image: radial-gradient(rgba(0, 112, 243, 0.35) 1.5px, transparent 1.5px);
+      background-size: 44px 44px;
     }
 
-    /* Floating Glowing Radial Mesh Orbs */
+    /* Floating Glowing Radial Mesh Orbs (High-Tech Blue & Cyan AI Lab Glow) */
     .orb-glow-1 {
       position: absolute;
-      width: 600px;
-      height: 600px;
+      width: 650px;
+      height: 650px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 112, 243, 0.28) 0%, rgba(0, 112, 243, 0) 70%);
-      filter: blur(120px);
+      background: radial-gradient(circle, rgba(0, 112, 243, 0.5) 0%, rgba(6, 182, 212, 0.22) 45%, rgba(0, 112, 243, 0) 75%);
+      filter: blur(100px);
       animation: floatOrb1 18s ease-in-out infinite alternate;
       pointer-events: none;
       z-index: 1;
     }
     .orb-glow-2 {
       position: absolute;
-      width: 550px;
-      height: 550px;
+      width: 600px;
+      height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 70%);
-      filter: blur(110px);
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.45) 0%, rgba(0, 112, 243, 0.2) 50%, rgba(6, 182, 212, 0) 75%);
+      filter: blur(100px);
       animation: floatOrb2 22s ease-in-out infinite alternate;
       pointer-events: none;
       z-index: 1;
     }
     .orb-glow-3 {
       position: absolute;
-      width: 480px;
-      height: 480px;
+      width: 550px;
+      height: 550px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 70%);
-      filter: blur(130px);
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(6, 182, 212, 0.18) 50%, rgba(59, 130, 246, 0) 75%);
+      filter: blur(110px);
       animation: floatOrb3 20s ease-in-out infinite alternate;
       pointer-events: none;
       z-index: 1;
@@ -223,8 +227,10 @@
 </head>
 <body class="selection:bg-blue-600 selection:text-white relative">
 
-  <!-- BACKGROUND GLOW ORBS & CYBER GRID (INVOIDEA SIGNATURE EFFECT) -->
-  <div class="fixed inset-0 cyber-grid pointer-events-none z-0 opacity-80"></div>
+  <!-- HIGH-OPACITY CYBER BLUEPRINT GRID, DOTS, AMBIENT ORBS & AI CANVAS -->
+  <div class="fixed inset-0 cyber-grid pointer-events-none z-0 opacity-100"></div>
+  <div class="fixed inset-0 cyber-dots pointer-events-none z-0 opacity-70"></div>
+  <canvas id="cyberCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
   <div class="fixed top-[-100px] left-[-100px] orb-glow-1"></div>
   <div class="fixed top-[30%] right-[-150px] orb-glow-2"></div>
   <div class="fixed bottom-[-100px] left-[20%] orb-glow-3"></div>
@@ -1008,29 +1014,41 @@
 
   <!-- INTERACTIVE JAVASCRIPT: CYBER CANVAS & SCOPE CALCULATOR -->
   <script>
-    // 1. INVOIDEA-STYLE DYNAMIC CYBER PARTICLES CANVAS
+    // 1. HIGH-TECH AI NEURAL SYNAPSE CANVAS
     (function initCyberCanvas() {
       const canvas = document.getElementById('cyberCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
       let width, height, particles = [];
+      let mouse = { x: null, y: null, radius: 140 };
 
       function resize() {
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
       }
       window.addEventListener('resize', resize);
       resize();
 
-      const particleCount = window.innerWidth < 768 ? 35 : 75;
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      const particleCount = window.innerWidth < 768 ? 40 : 80;
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.6,
-          vy: (Math.random() - 0.5) * 0.6,
-          radius: Math.random() * 2 + 1,
-          alpha: Math.random() * 0.5 + 0.2
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: (Math.random() - 0.5) * 0.7,
+          radius: Math.random() * 2 + 1.2,
+          alpha: Math.random() * 0.6 + 0.35,
+          color: Math.random() > 0.4 ? '6, 182, 212' : '0, 112, 243' // High-tech Cyan & Electric Blue
         });
       }
 
@@ -1048,21 +1066,38 @@
           if (p.y < 0) p.y = height;
           if (p.y > height) p.y = 0;
 
+          // Glowing Node
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(6, 182, 212, ${p.alpha})`;
+          ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = `rgba(${p.color}, 0.8)`;
           ctx.fill();
+          ctx.shadowBlur = 0;
 
-          // Connect nearby particles with subtle cyber lines
+          // Connect nearby particles with glowing AI synaptic beams
           for (let j = i + 1; j < particles.length; j++) {
             let p2 = particles[j];
             let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < 110) {
+            if (dist < 125) {
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(0, 112, 243, ${0.15 * (1 - dist / 110)})`;
-              ctx.lineWidth = 0.8;
+              ctx.strokeStyle = `rgba(6, 182, 212, ${0.32 * (1 - dist / 125)})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+
+          // Interactive connection to cursor
+          if (mouse.x !== null && mouse.y !== null) {
+            let mouseDist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+            if (mouseDist < mouse.radius) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.strokeStyle = `rgba(0, 112, 243, ${0.45 * (1 - mouseDist / mouse.radius)})`;
+              ctx.lineWidth = 1.2;
               ctx.stroke();
             }
           }
