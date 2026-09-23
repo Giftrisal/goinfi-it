@@ -1,0 +1,9 @@
+local-server.js
+server.js
+deploy.js
+deploy.config.json
+package.json
+package-lock.json
+node_modules
+*.zip
+*.bak
