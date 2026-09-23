@@ -105,7 +105,7 @@
     body {
       background-color: var(--bg-dark);
       color: #f1f5f9;
-      overflow-x: hidden;
+      overflow-x: clip;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
     h1, h2, h3, h4, .font-heading {
@@ -235,30 +235,30 @@
   <div class="fixed top-[30%] right-[-150px] orb-glow-2"></div>
   <div class="fixed bottom-[-100px] left-[20%] orb-glow-3"></div>
 
-  <!-- TOP LAB NOTIFICATION BANNER -->
-  <div class="relative z-50 bg-gradient-to-r from-blue-900/90 via-indigo-950/90 to-cyan-950/90 border-b border-blue-500/20 text-white text-xs py-2.5 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2 backdrop-blur-md">
-    <span class="bg-blue-500/30 text-cyan-300 border border-blue-400/40 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Goinfi Labs Sprint</span>
-    <span>Currently taking on <strong>Q3/Q4 Web, Enterprise Software & Mobile App</strong> projects.</span>
-    <a href="#estimator" class="underline hover:text-cyan-300 font-bold ml-1 flex items-center gap-1 inline-flex">
-      <span>Get Estimated Cost & Spec</span>
-      <span>&rarr;</span>
-    </a>
-  </div>
+  <!-- FIXED TOP NAVIGATION & LAB ANNOUNCEMENT (ALWAYS FIXED ON ALL DEVICES) -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl bg-dark-950/95 border-b border-white/10 shadow-xl shadow-black/40">
+    <!-- Top Announcement Strip (Compact & Clean) -->
+    <div class="hidden sm:flex bg-gradient-to-r from-blue-900/90 via-indigo-950/90 to-cyan-950/90 border-b border-blue-500/20 text-white text-[11px] py-1.5 px-4 text-center font-medium tracking-wide items-center justify-center gap-2">
+      <span class="bg-blue-500/30 text-cyan-300 border border-blue-400/40 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider">Goinfi Labs Sprint</span>
+      <span>Taking on <strong>Q3/Q4 Web, Enterprise Software & Mobile App</strong> projects.</span>
+      <a href="#estimator" class="underline hover:text-cyan-300 font-bold ml-1 flex items-center gap-1 inline-flex">
+        <span>Get Estimated Cost & Spec &rarr;</span>
+      </a>
+    </div>
 
-  <!-- NAVIGATION HEADER -->
-  <header class="sticky top-0 z-40 backdrop-blur-2xl bg-dark-950/80 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
       <!-- LOGO & BRANDING -->
-      <a href="#" class="flex items-center gap-3 group py-2">
-        <img src="logo-white.png" alt="Goinfi Labs Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group py-1">
+        <img src="logo-white.png" alt="Goinfi Labs Logo" class="h-9 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
         <span class="hidden sm:inline-flex items-center gap-1.5 text-[10px] text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/10 border border-cyan-500/30 px-2.5 py-1 rounded-full ml-1">
           <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
           <span>A Goinfi Enterprise</span>
         </span>
       </a>
 
-      <!-- NAV LINKS -->
+      <!-- DESKTOP NAV LINKS -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
         <a href="#pillars" class="hover:text-cyan-400 transition-colors">Core Capabilities</a>
         <a href="#tech-stack" class="hover:text-cyan-400 transition-colors">Tech Stack</a>
@@ -271,27 +271,69 @@
         <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
       </nav>
 
-      <!-- ACTION BUTTONS -->
-      <div class="flex items-center gap-3">
+      <!-- ACTION BUTTONS & MOBILE HAMBURGER -->
+      <div class="flex items-center gap-2 sm:gap-3">
         <!-- Direct WhatsApp Chat -->
-        <a href="https://wa.me/9779715100200?text=Hello%20Goinfi%20Labs!%20I%20want%20to%20discuss%20a%20new%20Web%2C%20Software%2C%20or%20Mobile%20App%20project." target="_blank" class="hidden sm:flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] hover:bg-[#25D366]/15 text-gray-200 hover:text-white transition-all">
+        <a href="https://wa.me/9779715100200?text=Hello%20Goinfi%20Labs!%20I%20want%20to%20discuss%20a%20new%20Web%2C%20Software%2C%20or%20Mobile%20App%20project." target="_blank" class="hidden sm:flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] hover:bg-[#25D366]/15 text-gray-200 hover:text-white transition-all">
           <span class="w-2 h-2 rounded-full bg-[#25D366] badge-pulse"></span>
           <span>WhatsApp Chat</span>
         </a>
 
         <!-- Start Project CTA -->
-        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wide shadow-md shadow-blue-500/25 transition-all">
+        <a href="#contact" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs tracking-wide shadow-md shadow-blue-500/25 transition-all">
           Start Project
         </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/50 text-gray-300 hover:text-cyan-300 focus:outline-none transition-colors">
+          <svg id="menuIconClosed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="menuIconOpened" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-white/10 bg-dark-950/98 backdrop-blur-3xl px-4 py-5 shadow-2xl">
+      <nav class="flex flex-col space-y-2.5 text-sm font-semibold text-gray-200">
+        <a href="#pillars" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Core Capabilities</span>
+          <span class="text-xs text-gray-500">&rarr;</span>
+        </a>
+        <a href="#tech-stack" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Tech Stack</span>
+          <span class="text-xs text-gray-500">&rarr;</span>
+        </a>
+        <a href="#process" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Lab Sprint</span>
+          <span class="text-xs text-gray-500">&rarr;</span>
+        </a>
+        <a href="#estimator" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Project Estimator</span>
+          <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-mono font-bold">Interactive</span>
+        </a>
+        <a href="#guarantees" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Guarantees</span>
+          <span class="text-xs text-gray-500">&rarr;</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link px-3.5 py-2.5 rounded-xl hover:bg-white/5 hover:text-cyan-300 flex items-center justify-between transition-colors">
+          <span>Start Project / Contact</span>
+          <span class="text-xs text-cyan-400">&rarr;</span>
+        </a>
+        <div class="pt-3 mt-1 border-t border-white/10 flex flex-col gap-2">
+          <a href="https://wa.me/9779715100200?text=Hello%20Goinfi%20Labs!%20I%20want%20to%20discuss%20a%20new%20project." target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs tracking-wider transition-colors shadow-lg shadow-[#25D366]/20">
+            <span>WhatsApp (+977 9715100200)</span>
+          </a>
+        </div>
+      </nav>
     </div>
   </header>
 
   <!-- HERO SECTION WITH INVOIDEA-STYLE CYBER CANVAS & DYNAMIC MOTION -->
-  <section class="relative pt-16 sm:pt-24 pb-28 sm:pb-36 overflow-hidden z-10">
-    
-    <!-- Interactive Background Particle Canvas -->
-    <canvas id="cyberCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0"></canvas>
+  <section class="relative pt-24 sm:pt-36 pb-28 sm:pb-36 overflow-hidden z-10">
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       
@@ -1105,6 +1147,36 @@
         requestAnimationFrame(draw);
       }
       draw();
+    })();
+
+    // Mobile Menu Drawer Toggle & Auto-Close
+    (function initMobileMenu() {
+      const btn = document.getElementById('mobileMenuBtn');
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const iconClosed = document.getElementById('menuIconClosed');
+      const iconOpened = document.getElementById('menuIconOpened');
+      if (!btn || !drawer) return;
+
+      btn.addEventListener('click', () => {
+        const isHidden = drawer.classList.contains('hidden');
+        if (isHidden) {
+          drawer.classList.remove('hidden');
+          if (iconClosed) iconClosed.classList.add('hidden');
+          if (iconOpened) iconOpened.classList.remove('hidden');
+        } else {
+          drawer.classList.add('hidden');
+          if (iconClosed) iconClosed.classList.remove('hidden');
+          if (iconOpened) iconOpened.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          drawer.classList.add('hidden');
+          if (iconClosed) iconClosed.classList.remove('hidden');
+          if (iconOpened) iconOpened.classList.add('hidden');
+        });
+      });
     })();
 
     // 2. PROJECT SCOPE & COST ESTIMATOR LOGIC
