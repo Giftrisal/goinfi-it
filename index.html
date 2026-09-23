@@ -1117,16 +1117,17 @@
           ctx.fill();
           ctx.shadowBlur = 0;
 
-          // Connect nearby particles with glowing AI synaptic beams
+          // Connect nearby particles with clear, glowing AI synaptic beams
+          const maxDist = window.innerWidth < 768 ? 130 : 150;
           for (let j = i + 1; j < particles.length; j++) {
             let p2 = particles[j];
             let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < 125) {
+            if (dist < maxDist) {
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(6, 182, 212, ${0.32 * (1 - dist / 125)})`;
-              ctx.lineWidth = 1;
+              ctx.strokeStyle = `rgba(6, 182, 212, ${0.65 * (1 - dist / maxDist)})`;
+              ctx.lineWidth = 1.2;
               ctx.stroke();
             }
           }
@@ -1138,8 +1139,8 @@
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(mouse.x, mouse.y);
-              ctx.strokeStyle = `rgba(0, 112, 243, ${0.45 * (1 - mouseDist / mouse.radius)})`;
-              ctx.lineWidth = 1.2;
+              ctx.strokeStyle = `rgba(0, 112, 243, ${0.75 * (1 - mouseDist / mouse.radius)})`;
+              ctx.lineWidth = 1.5;
               ctx.stroke();
             }
           }
