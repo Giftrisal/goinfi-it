@@ -8,7 +8,7 @@
 - **Parent Ecosystem:** Goinfi (`https://goinfi.biz`)
 - **Domain:** `https://labs.goinfi.biz`
 - **Primary Mission:** Client acquisition for high-value Web Development, Custom Software Engineering, and Mobile App Development projects.
-- **Lead WhatsApp:** `+977 9851355569`
+- **Lead WhatsApp:** `+977 9715100200`
 - **Email:** `support@goinfi.biz`
 - **Headquarters:** Kathmandu & Pokhara, Nepal
 
