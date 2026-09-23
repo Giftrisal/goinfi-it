@@ -28,7 +28,18 @@ async function deploy() {
     const list = await client.list();
     console.log('Remote files:', list.map(f => f.name));
 
-    const filesToDeploy = ['index.html', 'logo.png', 'sitemap.xml', 'robots.txt', '.htaccess'];
+    const filesToDeploy = [
+      'index.html',
+      'logo.png',
+      'logo-white.png',
+      'favicon.ico',
+      'favicon.png',
+      'favicon-32x32.png',
+      'apple-touch-icon.png',
+      'sitemap.xml',
+      'robots.txt',
+      '.htaccess'
+    ];
 
     for (const file of filesToDeploy) {
       const localFile = path.join(__dirname, file);
@@ -38,7 +49,7 @@ async function deploy() {
       }
     }
 
-    console.log('\n🚀 Deployment Complete! All files are live on https://it.goinfi.biz/');
+    console.log('\n🚀 Deployment Complete! All files are live on https://labs.goinfi.biz/');
   } catch (err) {
     console.error('Deployment failed:', err.message);
   } finally {
