@@ -124,15 +124,24 @@
       background-size: 44px 44px;
     }
 
-    /* Floating Glowing Radial Mesh Orbs (Soft Ambient AI Glow - Deep Dark Backdrop) */
+    /* Hardware-Accelerated Cyber Canvas */
+    #cyberCanvas {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+
+    /* Floating Glowing Radial Mesh Orbs (GPU Accelerated) */
     .orb-glow-1 {
       position: absolute;
       width: 650px;
       height: 650px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(0, 112, 243, 0.22) 0%, rgba(6, 182, 212, 0.1) 45%, rgba(0, 112, 243, 0) 75%);
-      filter: blur(120px);
+      filter: blur(80px);
       animation: floatOrb1 18s ease-in-out infinite alternate;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
       pointer-events: none;
       z-index: 1;
     }
@@ -142,8 +151,10 @@
       height: 600px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(0, 112, 243, 0.08) 50%, rgba(6, 182, 212, 0) 75%);
-      filter: blur(120px);
+      filter: blur(80px);
       animation: floatOrb2 22s ease-in-out infinite alternate;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
       pointer-events: none;
       z-index: 1;
     }
@@ -153,35 +164,37 @@
       height: 550px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, rgba(6, 182, 212, 0.06) 50%, rgba(59, 130, 246, 0) 75%);
-      filter: blur(130px);
+      filter: blur(90px);
       animation: floatOrb3 20s ease-in-out infinite alternate;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
       pointer-events: none;
       z-index: 1;
     }
 
     @keyframes floatOrb1 {
-      0% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(80px, 40px) scale(1.1); }
-      100% { transform: translate(-40px, 80px) scale(0.95); }
+      0% { transform: translate3d(0px, 0px, 0) scale(1); }
+      50% { transform: translate3d(80px, 40px, 0) scale(1.1); }
+      100% { transform: translate3d(-40px, 80px, 0) scale(0.95); }
     }
     @keyframes floatOrb2 {
-      0% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(-90px, -50px) scale(1.15); }
-      100% { transform: translate(50px, -30px) scale(1); }
+      0% { transform: translate3d(0px, 0px, 0) scale(1); }
+      50% { transform: translate3d(-90px, -50px, 0) scale(1.15); }
+      100% { transform: translate3d(50px, -30px, 0) scale(1); }
     }
     @keyframes floatOrb3 {
-      0% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(60px, -60px) scale(1.08); }
-      100% { transform: translate(-50px, 30px) scale(0.92); }
+      0% { transform: translate3d(0px, 0px, 0) scale(1); }
+      50% { transform: translate3d(60px, -60px, 0) scale(1.08); }
+      100% { transform: translate3d(-50px, 30px, 0) scale(0.92); }
     }
 
-    /* Glassmorphic Cyber Cards */
+    /* Glassmorphic Cyber Cards (Optimized Performance) */
     .lab-card {
-      background: rgba(11, 17, 32, 0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(11, 17, 32, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
     .lab-card:hover {
       border-color: rgba(0, 112, 243, 0.5);
@@ -1056,45 +1069,63 @@
 
   <!-- INTERACTIVE JAVASCRIPT: CYBER CANVAS & SCOPE CALCULATOR -->
   <script>
-    // 1. HIGH-TECH AI NEURAL SYNAPSE CANVAS
+    // 1. HIGH-TECH AI NEURAL SYNAPSE CANVAS (ULTRA-FAST & GPU OPTIMIZED)
     (function initCyberCanvas() {
       const canvas = document.getElementById('cyberCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
       let width, height, particles = [];
-      let mouse = { x: null, y: null, radius: 140 };
+      let mouse = { x: null, y: null, radius: 130 };
+      let isRunning = true;
+
+      const isMobile = window.innerWidth < 768;
+      const particleCount = isMobile ? 22 : 45;
+      const maxDist = isMobile ? 120 : 140;
+      const maxDistSq = maxDist * maxDist;
 
       function resize() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
       }
-      window.addEventListener('resize', resize);
+      window.addEventListener('resize', resize, { passive: true });
       resize();
 
       window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
-      });
+      }, { passive: true });
 
       window.addEventListener('mouseleave', () => {
         mouse.x = null;
         mouse.y = null;
       });
 
-      const particleCount = window.innerWidth < 768 ? 40 : 80;
+      // Pause when tab is not active to save 100% CPU/battery
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          isRunning = false;
+        } else {
+          if (!isRunning) {
+            isRunning = true;
+            requestAnimationFrame(draw);
+          }
+        }
+      });
+
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.7,
-          vy: (Math.random() - 0.5) * 0.7,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
           radius: Math.random() * 2 + 1.2,
-          alpha: Math.random() * 0.6 + 0.35,
-          color: Math.random() > 0.4 ? '6, 182, 212' : '0, 112, 243' // High-tech Cyan & Electric Blue
+          alpha: Math.random() * 0.5 + 0.45,
+          color: Math.random() > 0.4 ? '6, 182, 212' : '0, 112, 243'
         });
       }
 
       function draw() {
+        if (!isRunning) return;
         ctx.clearRect(0, 0, width, height);
 
         // Update and draw particles
@@ -1108,25 +1139,32 @@
           if (p.y < 0) p.y = height;
           if (p.y > height) p.y = 0;
 
-          // Glowing Node
+          // Outer soft glow halo (Zero GPU blur cost, 100% smooth)
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius * 2.2, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.color}, 0.22)`;
+          ctx.fill();
+
+          // Core bright node
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
-          ctx.shadowBlur = 6;
-          ctx.shadowColor = `rgba(${p.color}, 0.8)`;
           ctx.fill();
-          ctx.shadowBlur = 0;
 
-          // Connect nearby particles with clear, glowing AI synaptic beams
-          const maxDist = window.innerWidth < 768 ? 130 : 150;
+          // Connect nearby particles (Fast bounding-box pre-check)
           for (let j = i + 1; j < particles.length; j++) {
             let p2 = particles[j];
-            let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < maxDist) {
+            let dx = p.x - p2.x;
+            if (dx > maxDist || dx < -maxDist) continue;
+            let dy = p.y - p2.y;
+            if (dy > maxDist || dy < -maxDist) continue;
+            let distSq = dx * dx + dy * dy;
+            if (distSq < maxDistSq) {
+              let alpha = 0.65 * (1 - Math.sqrt(distSq) / maxDist);
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(6, 182, 212, ${0.65 * (1 - dist / maxDist)})`;
+              ctx.strokeStyle = `rgba(6, 182, 212, ${alpha})`;
               ctx.lineWidth = 1.2;
               ctx.stroke();
             }
@@ -1134,14 +1172,19 @@
 
           // Interactive connection to cursor
           if (mouse.x !== null && mouse.y !== null) {
-            let mouseDist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-            if (mouseDist < mouse.radius) {
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(mouse.x, mouse.y);
-              ctx.strokeStyle = `rgba(0, 112, 243, ${0.75 * (1 - mouseDist / mouse.radius)})`;
-              ctx.lineWidth = 1.5;
-              ctx.stroke();
+            let mdx = p.x - mouse.x;
+            let mdy = p.y - mouse.y;
+            if (mdx < mouse.radius && mdx > -mouse.radius && mdy < mouse.radius && mdy > -mouse.radius) {
+              let mdistSq = mdx * mdx + mdy * mdy;
+              if (mdistSq < mouse.radius * mouse.radius) {
+                let mdist = Math.sqrt(mdistSq);
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(mouse.x, mouse.y);
+                ctx.strokeStyle = `rgba(0, 112, 243, ${0.75 * (1 - mdist / mouse.radius)})`;
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+              }
             }
           }
         }
